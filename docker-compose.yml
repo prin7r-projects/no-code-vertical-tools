@@ -16,3 +16,37 @@ services:
       - "traefik.http.routers.no-code-vertical-tools.entrypoints=websecure"
       - "traefik.http.routers.no-code-vertical-tools.tls.certresolver=letsencrypt"
       - "traefik.http.services.no-code-vertical-tools.loadbalancer.server.port=3000"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    image: tradetoolset-app:latest
+    container_name: tradetoolset-app
+    restart: unless-stopped
+    expose:
+      - "3100"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.tradetoolset-app.rule=Host(`no-code-vertical-tools.prin7r.com`) && PathPrefix(`/app`, `/dashboard`, `/api`, `/operator`, `/builders`, `/me`)"
+      - "traefik.http.routers.tradetoolset-app.entrypoints=websecure"
+      - "traefik.http.routers.tradetoolset-app.tls.certresolver=letsencrypt"
+      - "traefik.http.services.tradetoolset-app.loadbalancer.server.port=3100"
+
+  db:
+    image: postgres:16
+    container_name: tradetoolset-db
+    restart: unless-stopped
+    expose:
+      - "5432"
+    env_file:
+      - .env
+    volumes:
+      - tradetoolset-db-data:/var/lib/postgresql/data
+
+volumes:
+  tradetoolset-db-data:
