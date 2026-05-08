@@ -133,22 +133,22 @@ const TOOLS: Tool[] = [
 function PreviewQuote() {
   return (
     <svg viewBox="0 0 240 100" width="100%" height="100%" role="img" aria-label="HVAC quote PDF preview" preserveAspectRatio="xMidYMid slice">
-      <rect width="240" height="100" fill="#1d2024" />
-      <rect x="12" y="12" width="100" height="6" fill="#f3efe7" />
-      <rect x="12" y="22" width="60" height="4" fill="#9aa0a8" />
-      <rect x="12" y="36" width="80" height="3" fill="#9aa0a8" />
-      <rect x="12" y="42" width="60" height="3" fill="#9aa0a8" />
-      <rect x="12" y="48" width="90" height="3" fill="#9aa0a8" />
-      <rect x="120" y="12" width="108" height="60" fill="#0c0d0e" stroke="#2a2e34" />
-      <text x="126" y="26" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#9aa0a8">SUBTOTAL</text>
-      <text x="206" y="26" textAnchor="end" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#f3efe7">$ 6,420</text>
-      <text x="126" y="40" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#9aa0a8">DUCTWORK</text>
-      <text x="206" y="40" textAnchor="end" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#f3efe7">$ 1,180</text>
-      <line x1="126" y1="46" x2="226" y2="46" stroke="#2a2e34" />
-      <text x="126" y="60" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#f76d3c">TOTAL</text>
-      <text x="206" y="60" textAnchor="end" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#f76d3c">$ 7,600</text>
-      <rect x="12" y="78" width="60" height="14" fill="#f76d3c" />
-      <text x="42" y="88" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="8" fontWeight="600" fill="#0c0d0e">SEND PDF</text>
+      <rect width="240" height="100" fill="#161718" />
+      <rect x="12" y="12" width="100" height="6" fill="#f7f8f8" />
+      <rect x="12" y="22" width="60" height="4" fill="#8a8f98" />
+      <rect x="12" y="36" width="80" height="3" fill="#8a8f98" />
+      <rect x="12" y="42" width="60" height="3" fill="#8a8f98" />
+      <rect x="12" y="48" width="90" height="3" fill="#8a8f98" />
+      <rect x="120" y="12" width="108" height="60" fill="#08090a" stroke="#23252a" />
+      <text x="126" y="26" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#8a8f98">SUBTOTAL</text>
+      <text x="206" y="26" textAnchor="end" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#f7f8f8">$ 6,420</text>
+      <text x="126" y="40" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#8a8f98">DUCTWORK</text>
+      <text x="206" y="40" textAnchor="end" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#f7f8f8">$ 1,180</text>
+      <line x1="126" y1="46" x2="226" y2="46" stroke="#23252a" />
+      <text x="126" y="60" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#e4f222">TOTAL</text>
+      <text x="206" y="60" textAnchor="end" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#e4f222">$ 7,600</text>
+      <rect x="12" y="78" width="60" height="14" fill="#e4f222" />
+      <text x="42" y="88" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="8" fontWeight="600" fill="#08090a">SEND PDF</text>
     </svg>
   );
 }
@@ -156,20 +156,20 @@ function PreviewQuote() {
 function PreviewNoShow() {
   return (
     <svg viewBox="0 0 240 100" width="100%" height="100%" role="img" aria-label="No-show risk dashboard preview" preserveAspectRatio="xMidYMid slice">
-      <rect width="240" height="100" fill="#1d2024" />
-      <text x="12" y="20" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#9aa0a8">NEXT 7 DAYS · RISK SCORE</text>
+      <rect width="240" height="100" fill="#161718" />
+      <text x="12" y="20" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#8a8f98">NEXT 7 DAYS · RISK SCORE</text>
       {[
-        { y: 30, n: "M. Patel · 09:00", w: 78, c: "#f76d3c" },
-        { y: 44, n: "C. Ng · 10:30", w: 64, c: "#f76d3c" },
+        { y: 30, n: "M. Patel · 09:00", w: 78, c: "#e4f222" },
+        { y: 44, n: "C. Ng · 10:30", w: 64, c: "#e4f222" },
         { y: 58, n: "T. Clarke · 13:15", w: 38, c: "#f5d96a" },
-        { y: 72, n: "K. Singh · 15:00", w: 22, c: "#7be0a6" },
-        { y: 86, n: "R. Müller · 16:45", w: 12, c: "#7be0a6" }
+        { y: 72, n: "K. Singh · 15:00", w: 22, c: "#27a644" },
+        { y: 86, n: "R. Müller · 16:45", w: 12, c: "#27a644" }
       ].map((row, i) => (
         <g key={i}>
-          <text x="12" y={row.y + 8} fontFamily="Inter, sans-serif" fontSize="7" fill="#f3efe7">{row.n}</text>
-          <rect x="124" y={row.y} width="100" height="8" fill="#0c0d0e" stroke="#2a2e34" />
+          <text x="12" y={row.y + 8} fontFamily="Inter, sans-serif" fontSize="7" fill="#f7f8f8">{row.n}</text>
+          <rect x="124" y={row.y} width="100" height="8" fill="#08090a" stroke="#23252a" />
           <rect x="124" y={row.y} width={row.w} height="8" fill={row.c} />
-          <text x="226" y={row.y + 7} textAnchor="end" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#f3efe7">{row.w}%</text>
+          <text x="226" y={row.y + 7} textAnchor="end" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#f7f8f8">{row.w}%</text>
         </g>
       ))}
     </svg>
@@ -179,8 +179,8 @@ function PreviewNoShow() {
 function PreviewTableTurn() {
   return (
     <svg viewBox="0 0 240 100" width="100%" height="100%" role="img" aria-label="Table-turn heatmap preview" preserveAspectRatio="xMidYMid slice">
-      <rect width="240" height="100" fill="#1d2024" />
-      <text x="12" y="18" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#9aa0a8">FRI · TURNS / HR</text>
+      <rect width="240" height="100" fill="#161718" />
+      <text x="12" y="18" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#8a8f98">FRI · TURNS / HR</text>
       {Array.from({ length: 7 }).map((_, col) =>
         Array.from({ length: 4 }).map((_, row) => {
           const opacity = 0.12 + Math.random() * 0.85;
@@ -192,14 +192,14 @@ function PreviewTableTurn() {
               y={28 + row * 16}
               width="26"
               height="12"
-              fill={isHot ? "#f76d3c" : "#0c0d0e"}
-              stroke="#2a2e34"
+              fill={isHot ? "#e4f222" : "#08090a"}
+              stroke="#23252a"
               opacity={isHot ? 0.85 : opacity}
             />
           );
         })
       )}
-      <text x="12" y="98" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#9aa0a8">17:00 · 18:00 · 19:00 · 20:00 · 21:00 · 22:00 · 23:00</text>
+      <text x="12" y="98" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#8a8f98">17:00 · 18:00 · 19:00 · 20:00 · 21:00 · 22:00 · 23:00</text>
     </svg>
   );
 }
@@ -207,15 +207,15 @@ function PreviewTableTurn() {
 function PreviewRebook() {
   return (
     <svg viewBox="0 0 240 100" width="100%" height="100%" role="img" aria-label="Rebook SMS preview" preserveAspectRatio="xMidYMid slice">
-      <rect width="240" height="100" fill="#1d2024" />
-      <rect x="14" y="14" width="200" height="72" rx="8" fill="#0c0d0e" stroke="#2a2e34" />
-      <text x="22" y="30" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#9aa0a8">+44 7700 · 6 weeks since color</text>
-      <text x="22" y="46" fontFamily="Inter, sans-serif" fontSize="9" fill="#f3efe7">Hi Maya — Sofia&apos;s open Tue 11:00,</text>
-      <text x="22" y="58" fontFamily="Inter, sans-serif" fontSize="9" fill="#f3efe7">Wed 16:00, or Sat 09:30.</text>
-      <text x="22" y="70" fontFamily="Inter, sans-serif" fontSize="9" fill="#f3efe7">Tap one to confirm.</text>
-      <rect x="22" y="76" width="40" height="6" fill="#f76d3c" />
-      <rect x="68" y="76" width="40" height="6" fill="#2a2e34" />
-      <rect x="114" y="76" width="40" height="6" fill="#2a2e34" />
+      <rect width="240" height="100" fill="#161718" />
+      <rect x="14" y="14" width="200" height="72" rx="8" fill="#08090a" stroke="#23252a" />
+      <text x="22" y="30" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#8a8f98">+44 7700 · 6 weeks since color</text>
+      <text x="22" y="46" fontFamily="Inter, sans-serif" fontSize="9" fill="#f7f8f8">Hi Maya — Sofia&apos;s open Tue 11:00,</text>
+      <text x="22" y="58" fontFamily="Inter, sans-serif" fontSize="9" fill="#f7f8f8">Wed 16:00, or Sat 09:30.</text>
+      <text x="22" y="70" fontFamily="Inter, sans-serif" fontSize="9" fill="#f7f8f8">Tap one to confirm.</text>
+      <rect x="22" y="76" width="40" height="6" fill="#e4f222" />
+      <rect x="68" y="76" width="40" height="6" fill="#23252a" />
+      <rect x="114" y="76" width="40" height="6" fill="#23252a" />
     </svg>
   );
 }
@@ -223,20 +223,20 @@ function PreviewRebook() {
 function PreviewInvoice() {
   return (
     <svg viewBox="0 0 240 100" width="100%" height="100%" role="img" aria-label="Invoice chaser draft preview" preserveAspectRatio="xMidYMid slice">
-      <rect width="240" height="100" fill="#1d2024" />
-      <text x="12" y="18" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#9aa0a8">QUEUE · SEND FRIDAY 09:00</text>
+      <rect width="240" height="100" fill="#161718" />
+      <text x="12" y="18" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#8a8f98">QUEUE · SEND FRIDAY 09:00</text>
       {[
         { c: "Aurora Co.", d: 17, a: "$ 4,800" },
         { c: "Chen & Bell", d: 22, a: "$ 1,250" },
         { c: "Northwind", d: 31, a: "$ 9,400" }
       ].map((row, i) => (
         <g key={i}>
-          <rect x="12" y={28 + i * 22} width="216" height="18" fill="#0c0d0e" stroke="#2a2e34" />
-          <text x="20" y={40 + i * 22} fontFamily="Inter, sans-serif" fontSize="9" fontWeight="600" fill="#f3efe7">{row.c}</text>
-          <text x="118" y={40 + i * 22} fontFamily="JetBrains Mono, monospace" fontSize="8" fill={row.d > 30 ? "#f76d3c" : "#9aa0a8"}>{row.d}d</text>
-          <text x="160" y={40 + i * 22} fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#f3efe7">{row.a}</text>
-          <rect x="200" y={32 + i * 22} width="22" height="10" fill="#f76d3c" />
-          <text x="211" y={40 + i * 22} textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="7" fontWeight="600" fill="#0c0d0e">SEND</text>
+          <rect x="12" y={28 + i * 22} width="216" height="18" fill="#08090a" stroke="#23252a" />
+          <text x="20" y={40 + i * 22} fontFamily="Inter, sans-serif" fontSize="9" fontWeight="600" fill="#f7f8f8">{row.c}</text>
+          <text x="118" y={40 + i * 22} fontFamily="JetBrains Mono, monospace" fontSize="8" fill={row.d > 30 ? "#e4f222" : "#8a8f98"}>{row.d}d</text>
+          <text x="160" y={40 + i * 22} fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#f7f8f8">{row.a}</text>
+          <rect x="200" y={32 + i * 22} width="22" height="10" fill="#e4f222" />
+          <text x="211" y={40 + i * 22} textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="7" fontWeight="600" fill="#08090a">SEND</text>
         </g>
       ))}
     </svg>
@@ -246,14 +246,14 @@ function PreviewInvoice() {
 function PreviewChurn() {
   return (
     <svg viewBox="0 0 240 100" width="100%" height="100%" role="img" aria-label="Churn flag Slack alert preview" preserveAspectRatio="xMidYMid slice">
-      <rect width="240" height="100" fill="#1d2024" />
-      <rect x="12" y="14" width="216" height="72" fill="#0c0d0e" stroke="#2a2e34" />
-      <circle cx="22" cy="28" r="4" fill="#f76d3c" />
-      <text x="32" y="31" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#f76d3c">CHURN-FLAG · 8:00 AM</text>
-      <text x="22" y="46" fontFamily="Inter, sans-serif" fontSize="9" fontWeight="600" fill="#f3efe7">3 accounts at risk this week</text>
-      <text x="22" y="60" fontFamily="Inter, sans-serif" fontSize="8" fill="#9aa0a8">Trinket Co. · 4 signals · owner: Lena</text>
-      <text x="22" y="72" fontFamily="Inter, sans-serif" fontSize="8" fill="#9aa0a8">Hexagon · 3 signals · owner: Theo</text>
-      <text x="22" y="80" fontFamily="Inter, sans-serif" fontSize="8" fill="#9aa0a8">Dovetail · 3 signals · owner: Lena</text>
+      <rect width="240" height="100" fill="#161718" />
+      <rect x="12" y="14" width="216" height="72" fill="#08090a" stroke="#23252a" />
+      <circle cx="22" cy="28" r="4" fill="#e4f222" />
+      <text x="32" y="31" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#e4f222">CHURN-FLAG · 8:00 AM</text>
+      <text x="22" y="46" fontFamily="Inter, sans-serif" fontSize="9" fontWeight="600" fill="#f7f8f8">3 accounts at risk this week</text>
+      <text x="22" y="60" fontFamily="Inter, sans-serif" fontSize="8" fill="#8a8f98">Trinket Co. · 4 signals · owner: Lena</text>
+      <text x="22" y="72" fontFamily="Inter, sans-serif" fontSize="8" fill="#8a8f98">Hexagon · 3 signals · owner: Theo</text>
+      <text x="22" y="80" fontFamily="Inter, sans-serif" fontSize="8" fill="#8a8f98">Dovetail · 3 signals · owner: Lena</text>
     </svg>
   );
 }
@@ -261,15 +261,15 @@ function PreviewChurn() {
 function PreviewCart() {
   return (
     <svg viewBox="0 0 240 100" width="100%" height="100%" role="img" aria-label="WhatsApp abandoned cart preview" preserveAspectRatio="xMidYMid slice">
-      <rect width="240" height="100" fill="#1d2024" />
-      <rect x="14" y="14" width="200" height="72" rx="8" fill="#0c0d0e" stroke="#2a2e34" />
-      <circle cx="26" cy="28" r="6" fill="#7be0a6" />
-      <text x="38" y="32" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#7be0a6">WHATSAPP · 9 MIN AGO</text>
-      <text x="22" y="48" fontFamily="Inter, sans-serif" fontSize="9" fontWeight="600" fill="#f3efe7">Hey Sam — 2 items still in your bag</text>
-      <text x="22" y="60" fontFamily="Inter, sans-serif" fontSize="8" fill="#9aa0a8">Forge Hoodie · M · $ 78</text>
-      <text x="22" y="70" fontFamily="Inter, sans-serif" fontSize="8" fill="#9aa0a8">Trail Cap · charcoal · $ 32</text>
-      <rect x="22" y="74" width="80" height="8" fill="#f76d3c" />
-      <text x="62" y="80" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="7" fontWeight="600" fill="#0c0d0e">5% OFF · OPEN BAG</text>
+      <rect width="240" height="100" fill="#161718" />
+      <rect x="14" y="14" width="200" height="72" rx="8" fill="#08090a" stroke="#23252a" />
+      <circle cx="26" cy="28" r="6" fill="#27a644" />
+      <text x="38" y="32" fontFamily="JetBrains Mono, monospace" fontSize="7" fill="#27a644">WHATSAPP · 9 MIN AGO</text>
+      <text x="22" y="48" fontFamily="Inter, sans-serif" fontSize="9" fontWeight="600" fill="#f7f8f8">Hey Sam — 2 items still in your bag</text>
+      <text x="22" y="60" fontFamily="Inter, sans-serif" fontSize="8" fill="#8a8f98">Forge Hoodie · M · $ 78</text>
+      <text x="22" y="70" fontFamily="Inter, sans-serif" fontSize="8" fill="#8a8f98">Trail Cap · charcoal · $ 32</text>
+      <rect x="22" y="74" width="80" height="8" fill="#e4f222" />
+      <text x="62" y="80" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="7" fontWeight="600" fill="#08090a">5% OFF · OPEN BAG</text>
     </svg>
   );
 }
@@ -277,15 +277,15 @@ function PreviewCart() {
 function PreviewScope() {
   return (
     <svg viewBox="0 0 240 100" width="100%" height="100%" role="img" aria-label="Roofing scope-of-work email preview" preserveAspectRatio="xMidYMid slice">
-      <rect width="240" height="100" fill="#1d2024" />
-      <text x="12" y="18" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#9aa0a8">DRAFT · 4 PHOTOS · 3 LINE ITEMS</text>
-      <rect x="12" y="26" width="48" height="32" fill="#0c0d0e" stroke="#2a2e34" />
-      <rect x="64" y="26" width="48" height="32" fill="#0c0d0e" stroke="#2a2e34" />
-      <rect x="116" y="26" width="48" height="32" fill="#0c0d0e" stroke="#2a2e34" />
-      <rect x="168" y="26" width="48" height="32" fill="#0c0d0e" stroke="#2a2e34" />
-      <text x="12" y="72" fontFamily="Inter, sans-serif" fontSize="8" fill="#f3efe7">Tear-off &amp; haul · $ 2,100</text>
-      <text x="12" y="82" fontFamily="Inter, sans-serif" fontSize="8" fill="#f3efe7">Decking · 240 sf · $ 1,440</text>
-      <text x="12" y="92" fontFamily="Inter, sans-serif" fontSize="8" fill="#f76d3c">TOTAL · $ 8,260 · valid 14d</text>
+      <rect width="240" height="100" fill="#161718" />
+      <text x="12" y="18" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#8a8f98">DRAFT · 4 PHOTOS · 3 LINE ITEMS</text>
+      <rect x="12" y="26" width="48" height="32" fill="#08090a" stroke="#23252a" />
+      <rect x="64" y="26" width="48" height="32" fill="#08090a" stroke="#23252a" />
+      <rect x="116" y="26" width="48" height="32" fill="#08090a" stroke="#23252a" />
+      <rect x="168" y="26" width="48" height="32" fill="#08090a" stroke="#23252a" />
+      <text x="12" y="72" fontFamily="Inter, sans-serif" fontSize="8" fill="#f7f8f8">Tear-off &amp; haul · $ 2,100</text>
+      <text x="12" y="82" fontFamily="Inter, sans-serif" fontSize="8" fill="#f7f8f8">Decking · 240 sf · $ 1,440</text>
+      <text x="12" y="92" fontFamily="Inter, sans-serif" fontSize="8" fill="#e4f222">TOTAL · $ 8,260 · valid 14d</text>
     </svg>
   );
 }
@@ -376,12 +376,12 @@ function Header() {
 function LogoMark() {
   return (
     <svg width="22" height="22" viewBox="0 0 32 32" aria-label="Toolshelf logo">
-      <rect width="32" height="32" rx="6" fill="#0c0d0e" />
-      <rect x="5" y="9" width="22" height="2" fill="#f76d3c" />
-      <rect x="5" y="20" width="22" height="2" fill="#f76d3c" />
-      <rect x="9" y="11" width="3" height="9" fill="#f3efe7" />
-      <rect x="15" y="11" width="3" height="9" fill="#f3efe7" />
-      <rect x="21" y="11" width="3" height="9" fill="#f3efe7" />
+      <rect width="32" height="32" rx="6" fill="#08090a" />
+      <rect x="5" y="9" width="22" height="2" fill="#e4f222" />
+      <rect x="5" y="20" width="22" height="2" fill="#e4f222" />
+      <rect x="9" y="11" width="3" height="9" fill="#f7f8f8" />
+      <rect x="15" y="11" width="3" height="9" fill="#f7f8f8" />
+      <rect x="21" y="11" width="3" height="9" fill="#f7f8f8" />
     </svg>
   );
 }

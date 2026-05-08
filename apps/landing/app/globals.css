@@ -5,17 +5,21 @@
 @tailwind utilities;
 
 :root {
-  /* Toolshelf — palette */
-  --bg: #0c0d0e;
-  --surface: #16181b;
-  --surface-2: #1d2024;
-  --border: #2a2e34;
-  --fg: #f3efe7;
-  --muted: #9aa0a8;
-  --accent: #f76d3c;
-  --accent-deep: #cf5527;
-  --warn: #f5d96a;
-  --ok: #7be0a6;
+  /* [TOOLSHELF_DARK_PIVOT 2026-05-08] Linear Midnight Command Center alignment.
+   * Was: #0c0d0e bg + #f76d3c orange accent. Now: pitch-black + neon-lime per
+   * /Users/keer/projects/prin7r/design-references/linear.md. Surfaces ramp
+   * canvas → graphite → deep-slate → charcoal-grey to mirror Linear's
+   * 4-tier surface elevation (see ref §Surfaces table). */
+  --bg: #08090a;             /* pitch-black — Linear page canvas */
+  --surface: #0f1011;        /* graphite — Linear card surface */
+  --surface-2: #161718;      /* deep-slate — Linear elevated card */
+  --border: #23252a;         /* charcoal-grey — Linear border */
+  --fg: #f7f8f8;             /* porcelain — Linear primary text */
+  --muted: #8a8f98;          /* storm cloud — Linear tertiary text */
+  --accent: #e4f222;         /* neon-lime — Linear primary action signature */
+  --accent-deep: #c2cf1c;    /* neon-lime hover (slightly darkened) */
+  --warn: #f5d96a;           /* amber retained for warn states */
+  --ok: #27a644;             /* emerald — Linear success */
 
   /* ShadCN-baseline mappings (for future apps/app/) */
   --background: var(--bg);
@@ -274,7 +278,7 @@ button {
   height: 6px;
   border-radius: 9999px;
   background: var(--ok);
-  box-shadow: 0 0 0 2px rgba(123, 224, 166, 0.18);
+  box-shadow: 0 0 0 2px rgba(39, 166, 68, 0.22);
 }
 
 .dot.draft {
@@ -333,7 +337,7 @@ input[type="text"] {
 input[type="email"]:focus,
 input[type="text"]:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(247, 109, 60, 0.18);
+  box-shadow: 0 0 0 3px rgba(228, 242, 34, 0.20);
 }
 
 @media (prefers-reduced-motion: reduce) {

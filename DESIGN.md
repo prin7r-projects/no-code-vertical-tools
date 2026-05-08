@@ -26,9 +26,9 @@ The brand is **a tool shop, not a software studio**. Every tool on the shelf has
 - A tiny screenshot mounted in a 6px-radius card
 - A SKU-style identifier (`TS-HVAC-002`) so it feels catalogued, not curated by a designer
 
-The visual feels closer to a hardware-store inventory or a precision-instrument catalog than to a typical SaaS landing. Background is **dark canvas** — but not the gamer-black of crypto sites. It's the gunmetal of a workshop wall under tube lighting. The accent is **Persimmon** (`#f76d3c`) — a warm, confident orange-red, the color of a clamp or a label-maker tag. Persimmon never appears as a background fill across large blocks; it is reserved for primary CTAs, active filter chips, and live status dots.
+The visual is a **Linear Midnight Command Center** rendered as a tool catalog: pitch-black canvas (`#08090a`), graphite/deep-slate surface ramp, neon-lime (`#e4f222`) as the single accent. Linear's dark UI discipline is exactly the right frame for a multi-tool catalog; a buyer scans 8 SKUs the way they scan an issue queue. We adopt Linear's full token system (Inter Variable + Berkeley/JetBrains Mono, 6px radii, layered surfaces) and use **neon-lime** for primary CTAs, active filter chips, and the live status dot — the way Linear uses it for the primary action button.
 
-We borrow palette discipline from Linear (dark base, layered surfaces, single accent, 6px radii, Inter + Mono pair) but **deliberately avoid neon-lime, deep-violet, and aether-blue**. Persimmon does the work. The mono pair is JetBrains-Mono-style, used for tool SKUs, prices, and filter labels.
+This is a deliberate Wave 2 design refresh (2026-05-08) from the prior **Persimmon** (`#f76d3c`) direction; on-brand for Linear-aligned operator tools, and removes the "warm orange clamp" metaphor that conflicted with the precision-instrument catalog framing. See §15 for the full pivot record.
 
 Don'ts:
 - No "build anything!" purple gradient
@@ -55,20 +55,25 @@ Wave 2 batch landings still ship as hand-rolled Tailwind components for build-sp
 
 The canonical palette is six colors plus three semantic tokens. Hex values are the source of truth; CSS variables are the implementation.
 
-| Name | Hex | Token | Role |
-|---|---|---|---|
-| Workshop Black | `#0c0d0e` | `--bg` | Page canvas — the deep wall behind the shelf |
-| Gunmetal | `#16181b` | `--surface` | Card surface (one shelf level above the canvas) |
-| Tool Steel | `#1d2024` | `--surface-2` | Elevated surface (modals, hovered tool card, sticky filter rail) |
-| Edge Grey | `#2a2e34` | `--border` | All hairline borders, dividers, table rules |
-| Lab Coat | `#f3efe7` | `--fg` | Primary text — slightly off-white, like a printed label tag |
-| Solder | `#9aa0a8` | `--muted` | Secondary text, captions, table headers |
-| Persimmon | `#f76d3c` | `--accent` | Primary CTA fill, active state, live status dot, focus ring |
-| Persimmon Deep | `#cf5527` | `--accent-deep` | CTA hover/pressed, link visited |
-| Sodium Yellow | `#f5d96a` | `--warn` | Warnings, "draft tool" badge, pre-release |
-| Mint | `#7be0a6` | `--ok` | Success state, "live" status dot, paid invoice toast |
+Linear-aligned palette (Wave 2 design refresh 2026-05-08). The names retain
+the Toolshelf metaphor; the hex values now match Linear's reference tokens
+1:1 (see `/Users/keer/projects/prin7r/design-references/linear.md`).
 
-Selection color: `background: var(--accent); color: var(--bg);` Selection is one of the only places Persimmon fills a block.
+| Name | Hex | Linear analog | Token | Role |
+|---|---|---|---|---|
+| Pitch Black | `#08090a` | Pitch Black | `--bg` | Page canvas |
+| Graphite | `#0f1011` | Graphite | `--surface` | Card surface (one level above canvas) |
+| Deep Slate | `#161718` | Deep Slate | `--surface-2` | Elevated surface (modals, hovered tool card, sticky filter rail, SVG preview bg) |
+| Charcoal Grey | `#23252a` | Charcoal Grey | `--border` | All hairline borders, dividers, table rules |
+| Porcelain | `#f7f8f8` | Porcelain | `--fg` | Primary text — slightly off-white, sharp contrast on pitch-black |
+| Storm Cloud | `#8a8f98` | Storm Cloud | `--muted` | Secondary text, captions, table headers |
+| Neon Lime | `#e4f222` | Neon Lime | `--accent` | Primary CTA fill, active state, live status dot, focus ring |
+| Neon Lime Deep | `#c2cf1c` | (derived) | `--accent-deep` | CTA hover/pressed |
+| Amber | `#f5d96a` | (warn) | `--warn` | Warnings, "draft tool" badge, pre-release |
+| Emerald | `#27a644` | Emerald | `--ok` | Success state, "live" status dot, paid invoice toast |
+
+Selection color: `background: var(--accent); color: var(--bg);` (Linear's
+exact pattern — neon-lime on pitch-black is the brand signature stamp).
 
 ## 5. Typography
 
@@ -194,11 +199,12 @@ These are also embedded in `README.md` and linked here.
 
 ## 14. External references and library sources
 
-- [Linear style reference](../../design-references/linear.md) — palette discipline, layered dark surfaces, 6px radii, Inter+Mono pair, single accent. We deliberately diverge on the accent (Persimmon, not Neon Lime) and on the hero (catalog-first, not slogan-first).
+- [Linear style reference](../../design-references/linear.md) — palette discipline, layered dark surfaces, 6px radii, Inter+Mono pair, single accent. **Aligned post-2026-05-08 refresh** to neon-lime accent (Linear's signature) and the full pitch-black/graphite/deep-slate/charcoal-grey surface ramp. The hero remains catalog-first (not slogan-first) — the Toolshelf brand.
 - [Refero Styles](https://styles.refero.design/) — searchable design-token gallery; consulted for catalog-grid patterns.
 - Workshop / hardware-store inventory aesthetic — Snap-on, Wera, Knipex catalog page conventions (SKU + price + photo + install).
 - Linear (visual reference, not clone), Vercel (header pattern), Stripe (pricing card density).
 
 ## 15. Changelog
 
+- **2026-05-08 design refresh — Linear pitch-black + neon-lime pivot.** Wave 2 design refresh per `wave2-design-references.json` mapping (`primary: linear`). Replaced full Toolshelf palette with Linear-spec tokens: bg `#0c0d0e → #08090a` (pitch-black), surface `#16181b → #0f1011` (graphite), surface-2 `#1d2024 → #161718` (deep-slate), border `#2a2e34 → #23252a` (charcoal-grey), fg `#f3efe7 → #f7f8f8` (porcelain), muted `#9aa0a8 → #8a8f98` (storm-cloud), accent `#f76d3c → #e4f222` (neon-lime), accent-deep `#cf5527 → #c2cf1c`, ok `#7be0a6 → #27a644` (emerald). Updated globals.css CSS vars + comments, tailwind.config.ts (CSS-var-driven so cascade is automatic), all 8 tool-card SVG previews in page.tsx (hardcoded hex values bulk-remapped), and `app/icon.svg`. Focus ring updated from rgba persimmon to rgba neon-lime. Brand voice / catalog-first hero / six verticals / NOWPayments wiring all preserved. Reference: `/Users/keer/projects/prin7r/design-references/linear.md`.
 - **2026-05-08** — Initial DESIGN.md. Brand: Toolshelf. Persimmon accent on workshop-black canvas. Catalog-first hero with 8-tool shelf. Inter + JetBrains Mono. Six tool verticals (HVAC / dental / restaurant / SaaS-ops / agency-ops / e-commerce). Three pricing tiers with NOWPayments crypto CTA. SaaS app folder stubbed. Wave 2 v2-bar landing.
