@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Toolshelf — pitch deck</title>
+<style>
+:root {
+  --bg: #0c0d0e;
+  --surface: #16181b;
+  --surface-2: #1d2024;
+  --border: #2a2e34;
+  --fg: #f3efe7;
+  --muted: #9aa0a8;
+  --accent: #f76d3c;
+  --accent-deep: #cf5527;
+  --warn: #f5d96a;
+  --ok: #7be0a6;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--fg);
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-feature-settings: 'cv01', 'ss03';
+  -webkit-font-smoothing: antialiased;
+}
+body { padding: 32px 24px 96px; }
+.deck { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.slide {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 56px 48px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 0 0 1px rgba(255,255,255,.02) inset;
+  position: relative;
+}
+.tag {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.muted-tag { color: var(--muted); }
+h1, h2, h3 { margin: 0; letter-spacing: -0.018em; }
+h1 { font-size: 56px; line-height: 1.04; font-weight: 680; }
+h2 { font-size: 32px; line-height: 1.18; font-weight: 590; }
+h3 { font-size: 20px; line-height: 1.3; font-weight: 590; color: var(--fg); }
+p { margin: 0; font-size: 16px; line-height: 1.55; color: var(--muted); }
+ul, ol { margin: 0; padding-left: 22px; }
+li { font-size: 15px; line-height: 1.5; color: var(--fg); margin-bottom: 8px; }
+li b { color: var(--fg); font-weight: 590; }
+a { color: var(--accent); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 10px 8px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+th { color: var(--muted); font-weight: 510; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+td.mono, .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--fg); }
+td.mono.dim { color: var(--muted); }
+.live { color: var(--ok); }
+.draft { color: var(--warn); }
+.accent { color: var(--accent); }
+blockquote { margin: 0; padding-left: 16px; border-left: 2px solid var(--accent); color: var(--fg); font-size: 17px; line-height: 1.5; }
+.deck-footer { text-align: center; color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; margin-top: 40px; }
+.shelf-mark { display: inline-flex; align-items: center; gap: 8px; }
+.dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--ok); box-shadow: 0 0 0 2px rgba(123,224,166,.18); display: inline-block; }
+.cover .lock {
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+.kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+.slide-num {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+}
+.list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.tile {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px;
+}
+.tile .head {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted);
+}
+.tile h3 { margin-top: 4px; margin-bottom: 6px; font-size: 17px; }
+.tile p { font-size: 14px; }
+@media print {
+  body { padding: 0; background: white; color: black; }
+  .slide { page-break-after: always; min-height: 100vh; box-shadow: none; border: none; }
+}
+@media (max-width: 720px) {
+  h1 { font-size: 36px; }
+  h2 { font-size: 24px; }
+  .slide { padding: 32px 20px; }
+  .list-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<main class="deck">
+
+<!-- SLIDE 1 — Cover -->
+<section class="slide cover">
+  <span class="slide-num">01 / 10</span>
+  <div class="lock">
+    <span><span class="dot"></span>&nbsp; TOOLSHELF · WAVE 2 · 2026.05</span>
+  </div>
+  <h1>Toolshelf.</h1>
+  <p style="font-size: 22px; line-height: 1.4; color: var(--fg); max-width: 700px;">
+    A catalog of vertical-specific no-code tools. One tool per niche pain point. Pick from the shelf, install in an afternoon, $39 / mo, cancel any time.
+  </p>
+  <div style="margin-top: auto;">
+    <p class="kicker">https://no-code-vertical-tools.prin7r.com</p>
+  </div>
+</section>
+
+<!-- SLIDE 2 — The wedge -->
+<section class="slide">
+  <span class="slide-num">02 / 10</span>
+  <span class="tag">THE WEDGE</span>
+  <h2>The no-code rainbow says &ldquo;build anything.&rdquo;</h2>
+  <p>The buyer is a roofer, a hygienist, a salon owner. She doesn&rsquo;t want anything. She wants the <em>one workflow</em> off her desk by Friday.</p>
+  <p>Today she has three options:</p>
+  <ul>
+    <li><b>A no-code agency</b> — $14k, six weeks.</li>
+    <li><b>A horizontal no-code platform</b> — a weekend of learning Bubble.</li>
+    <li><b>A hand-rolled DIY</b> — three weeks of fragility.</li>
+  </ul>
+  <p>We sell her option four: <span class="accent" style="font-weight: 590;">a $39 / mo SKU off a catalog.</span></p>
+</section>
+
+<!-- SLIDE 3 — The shelf -->
+<section class="slide">
+  <span class="slide-num">03 / 10</span>
+  <span class="tag">CATALOG · 7 LIVE / 1 DRAFT</span>
+  <h2>What&rsquo;s on the shelf.</h2>
+  <table>
+    <thead>
+      <tr><th class="mono">SKU</th><th>Vertical</th><th>Tool</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="mono">TS-HVAC-002</td><td>HVAC</td><td>Quote generator</td><td><span class="dot"></span>&nbsp;<span class="live mono">live</span></td></tr>
+      <tr><td class="mono">TS-DENT-004</td><td>Dental</td><td>No-show predictor</td><td><span class="dot"></span>&nbsp;<span class="live mono">live</span></td></tr>
+      <tr><td class="mono">TS-REST-007</td><td>Restaurant</td><td>Table-turn optimizer</td><td><span class="dot"></span>&nbsp;<span class="live mono">live</span></td></tr>
+      <tr><td class="mono">TS-SALN-001</td><td>Salon / spa</td><td>Rebook reminder</td><td><span class="dot"></span>&nbsp;<span class="live mono">live</span></td></tr>
+      <tr><td class="mono">TS-AGEN-003</td><td>Agency</td><td>Invoice chaser</td><td><span class="dot"></span>&nbsp;<span class="live mono">live</span></td></tr>
+      <tr><td class="mono">TS-SAOPS-005</td><td>SaaS-ops</td><td>Churn flag</td><td><span class="dot"></span>&nbsp;<span class="live mono">live</span></td></tr>
+      <tr><td class="mono">TS-ECOM-006</td><td>E-commerce</td><td>Cart-to-WhatsApp</td><td><span class="dot"></span>&nbsp;<span class="live mono">live</span></td></tr>
+      <tr><td class="mono">TS-ROOF-008</td><td>Roofing</td><td>Scope-of-work emailer</td><td><span class="draft mono">draft · q3</span></td></tr>
+    </tbody>
+  </table>
+  <p>Each tool is a working no-code template (Bubble, Webflow, Airtable, Zapier-flow), branded for your business and wired to your existing CRM, POS, or calendar.</p>
+</section>
+
+<!-- SLIDE 4 — Anatomy -->
+<section class="slide">
+  <span class="slide-num">04 / 10</span>
+  <span class="tag">TOOL ANATOMY · TS-HVAC-002</span>
+  <h2>What&rsquo;s actually inside one tool.</h2>
+  <p>Six pieces. Every time. Only the names of the parts change between verticals.</p>
+  <div class="list-grid">
+    <div class="tile">
+      <div class="head"><span>01</span><span class="accent">&gt;</span></div>
+      <h3>Input form</h3>
+      <p>Embeddable on your site. Vertical-specific fields (tonnage, ductwork age, install access).</p>
+    </div>
+    <div class="tile">
+      <div class="head"><span>02</span><span class="accent">&gt;</span></div>
+      <h3>Pricing rules</h3>
+      <p>Your real numbers, not a generic estimate. Imported from your last 90 days of jobs.</p>
+    </div>
+    <div class="tile">
+      <div class="head"><span>03</span><span class="accent">&gt;</span></div>
+      <h3>Branded artifact</h3>
+      <p>PDF / SMS / email on your domain, your logo. The customer sees only your brand.</p>
+    </div>
+    <div class="tile">
+      <div class="head"><span>04</span><span class="accent">&gt;</span></div>
+      <h3>Pay link</h3>
+      <p>Stripe (your account) or USDT/USDC via NOWPayments — straight to you.</p>
+    </div>
+    <div class="tile">
+      <div class="head"><span>05</span><span class="accent">&gt;</span></div>
+      <h3>Notifier</h3>
+      <p>SMS / WhatsApp on accept; Slack ping on owner-on-call; calendar event on your account.</p>
+    </div>
+    <div class="tile">
+      <div class="head"><span>06</span><span class="accent">&gt;</span></div>
+      <h3>Tuning notes</h3>
+      <p>Once a month, a one-page note: which inputs converted, what to adjust.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 5 — Pricing -->
+<section class="slide">
+  <span class="slide-num">05 / 10</span>
+  <span class="tag">PRICING · USDT · USDC · BTC · CARD ON-RAMP</span>
+  <h2>Three tiers. Crypto first.</h2>
+  <table>
+    <thead>
+      <tr><th>Tier</th><th>Price</th><th>What you get</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Single tool</b></td>
+        <td class="mono">$ 39 / mo</td>
+        <td>1 tool, install support, monthly tuning, 30-day refund.</td>
+      </tr>
+      <tr>
+        <td><b>Vertical bundle</b></td>
+        <td class="mono">$ 129 / mo</td>
+        <td>5 tools from one vertical + onboarding call + cohort Slack.</td>
+      </tr>
+      <tr>
+        <td><b>Builder publish</b></td>
+        <td class="mono">$ 0 + 30%</td>
+        <td>List your own tool. We do billing &amp; distribution. You keep 70%, paid monthly to USDT.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>USDT, USDC, BTC, or card-to-stablecoin via NOWPayments. <span class="accent">No card-required free trial — the first month is the trial.</span> 30-day full refund on the single-tool tier.</p>
+</section>
+
+<!-- SLIDE 6 — Why this works -->
+<section class="slide">
+  <span class="slide-num">06 / 10</span>
+  <span class="tag">WHY THIS WORKS · 4 REASONS</span>
+  <h2>Why catalog beats platform.</h2>
+  <ol>
+    <li><b>Catalog beats platform for the trade buyer.</b> She knows the workflow she wants fixed; she doesn&rsquo;t want to discover possibilities.</li>
+    <li><b>Vertical-specific shipping is faster than generalist no-code.</b> A pre-built dental no-show predictor beats a Bubble-from-scratch every time.</li>
+    <li><b>Price clears procurement-free decision.</b> $39 lives below the corporate-card-without-a-meeting line in every trade.</li>
+    <li><b>Crypto-first lowers our take rate vs Stripe by ~1.8%</b> — passed to the buyer as a lower price + higher gross margin to us.</li>
+  </ol>
+</section>
+
+<!-- SLIDE 7 — Builder side -->
+<section class="slide">
+  <span class="slide-num">07 / 10</span>
+  <span class="tag">BUILDER REV-SHARE · 70 / 30</span>
+  <h2>We pay 70% to vertical operators who publish.</h2>
+  <p><b>Daniyar</b> is the prototype: ex-Bubble freelancer, KZ, builds dental templates, has a USDT wallet, doesn&rsquo;t want a US LLC.</p>
+  <div class="list-grid">
+    <div class="tile">
+      <div class="head"><span>FOR THE BUILDER</span></div>
+      <ul>
+        <li>List, distribute, KYC, support escalation, billing — done.</li>
+        <li>70% of every install fee. Paid monthly. USDT to your wallet.</li>
+        <li>No exclusivity. Sell the same template direct elsewhere.</li>
+      </ul>
+    </div>
+    <div class="tile">
+      <div class="head"><span>FOR TOOLSHELF</span></div>
+      <ul>
+        <li>The shelf is curated by the trades themselves, not by twelve generalists.</li>
+        <li>Marginal cost of an additional tool: ~zero (catalog row + payment rail).</li>
+        <li>3+ tools per vertical = thicker positioning per vertical.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 8 — Distribution -->
+<section class="slide">
+  <span class="slide-num">08 / 10</span>
+  <span class="tag">DISTRIBUTION · WHERE THE BUYER LIVES</span>
+  <h2>Not LinkedIn.</h2>
+  <ul>
+    <li><b>Vertical FB groups</b> — Charlotte HVAC, BC Dental, Independent Restaurants, Salon Spa Owners.</li>
+    <li><b>Subreddits</b> — /r/HVAC, /r/dentistry, /r/agency, /r/Shopify.</li>
+    <li><b>Trade associations</b> — newsletters and quarterly calls (ACCA, AGD, AHLA).</li>
+    <li><b>Vertical newsletters</b> — Modern Restaurant Management, HVAC Insider, dental-practice-managers Substack.</li>
+  </ul>
+  <p>Cap $1,500 / mo on sponsored slots. <span class="accent">No paid Meta/Google in Wave 2.</span> The catalog earns its visits.</p>
+  <p>Builder side: Indie Hackers, X no-code corner, Bubble + Webflow showcase pages.</p>
+</section>
+
+<!-- SLIDE 9 — 90-day plan -->
+<section class="slide">
+  <span class="slide-num">09 / 10</span>
+  <span class="tag">90-DAY PLAN</span>
+  <h2>From shelf to $1.5k MRR.</h2>
+  <table>
+    <thead>
+      <tr><th>Day</th><th>Milestone</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="mono">0</td><td>Catalog landing live · 8 SKUs · NOWPayments hosted invoice working</td></tr>
+      <tr><td class="mono">7</td><td>First 6 FB-group moderator install offers out</td></tr>
+      <tr><td class="mono">14</td><td>First Indie Hackers launch post · first /r/HVAC answer-thread</td></tr>
+      <tr><td class="mono">30</td><td>3 paid installs · first vertical playbook drafts (HVAC)</td></tr>
+      <tr><td class="mono">60</td><td>12 paid installs · 1 published builder tool · HVAC playbook v1.0</td></tr>
+      <tr><td class="mono">90</td><td>40 paid installs · 3 published builder tools · $1,560 MRR</td></tr>
+    </tbody>
+  </table>
+  <p>Wave 3 scope locks at day 90: in-app install wizard + builder portal.</p>
+</section>
+
+<!-- SLIDE 10 — Ask -->
+<section class="slide">
+  <span class="slide-num">10 / 10</span>
+  <span class="tag">ASK</span>
+  <h2>No outside ask. Three doors.</h2>
+  <p>Wave 2 is funded by the Prin7r portfolio. We&rsquo;re cash-flow first, not raising.</p>
+  <div class="list-grid">
+    <div class="tile">
+      <div class="head"><span>IF YOU&rsquo;RE A TRADE OWNER</span></div>
+      <p style="color: var(--fg); font-size: 16px;">Install one tool. $39, cancel any time.</p>
+      <p class="mono" style="color: var(--accent);">no-code-vertical-tools.prin7r.com</p>
+    </div>
+    <div class="tile">
+      <div class="head"><span>IF YOU&rsquo;RE A NO-CODE BUILDER</span></div>
+      <p style="color: var(--fg); font-size: 16px;">Apply to publish a tool to the shelf.</p>
+      <p class="mono" style="color: var(--accent);">builders@toolshelf.cash</p>
+    </div>
+    <div class="tile">
+      <div class="head"><span>IF YOU MODERATE A VERTICAL FB GROUP</span></div>
+      <p style="color: var(--fg); font-size: 16px;">We sponsor honestly — free install for an honest screenshot.</p>
+      <p class="mono" style="color: var(--accent);">partners@toolshelf.cash</p>
+    </div>
+    <div class="tile">
+      <div class="head"><span>OR JUST READ THE CATALOG</span></div>
+      <p style="color: var(--fg); font-size: 16px;">The shelf, on display.</p>
+      <p class="mono" style="color: var(--accent);">no-code-vertical-tools.prin7r.com</p>
+    </div>
+  </div>
+  <p style="margin-top: 24px;" class="kicker">TOOLSHELF · A CATALOG OF SHARP TOOLS · MMXXVI</p>
+</section>
+
+<p class="deck-footer">TOOLSHELF · WAVE 2 · 2026.05.08 · &copy; Prin7r portfolio</p>
+</main>
+</body>
+</html>
