@@ -1,0 +1,125 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  buyer
+  builder
+  operator
+}
+
+model User {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  email     String?  @unique
+  role      Role     @default(buyer)
+
+  // Wasp auth fields
+  isAdmin   Boolean  @default(false)
+}
+
+enum ToolStatus {
+  draft
+  listed
+  unlisted
+  deprecated
+}
+
+enum SubscriptionStatus {
+  active
+  cancelled
+  paused
+}
+
+enum SubmissionDecision {
+  approved
+  rejected
+  changes_requested
+}
+
+model Builder {
+  id               String   @id @default(uuid())
+  userId           String?  @unique
+  user             User?    @relation(fields: [userId], references: [id])
+
+  email            String
+  payout_currency  String   // USDT|USDC
+  payout_address   String
+  rev_share_pct    Int      @default(70)
+
+  tools            Tool[]
+}
+
+model Buyer {
+  id             String   @id @default(uuid())
+  userId         String?  @unique
+  user           User?    @relation(fields: [userId], references: [id])
+
+  email          String   @unique
+  trade          String?
+  first_seen_at  DateTime @default(now())
+
+  subscriptions  Subscription[]
+}
+
+model Tool {
+  sku             String   @id // e.g. TT-HVAC-002
+  trade           String
+  one_job         String
+  install_link    String?
+  install_minutes Int
+  price_cents     Int
+  status          ToolStatus @default(draft)
+  builder_id      String
+  builder         Builder   @relation(fields: [builder_id], references: [id])
+  listed_at       DateTime?
+
+  subscriptions   Subscription[]
+  submissions     Submission[]
+
+  @@index([trade])
+}
+
+model Subscription {
+  id             String   @id @default(uuid())
+  tool_sku        String
+  tool            Tool     @relation(fields: [tool_sku], references: [sku])
+  buyer_id        String
+  buyer           Buyer    @relation(fields: [buyer_id], references: [id])
+  status          SubscriptionStatus @default(active)
+  started_at      DateTime @default(now())
+  ends_at         DateTime?
+
+  orders          Order[]
+
+  @@index([status])
+}
+
+model Order {
+  id             String   @id @default(uuid())
+  subscription_id String
+  subscription    Subscription @relation(fields: [subscription_id], references: [id])
+  invoice_id      String?  // NOWPayments invoice
+  payment_id      String?
+  amount_cents    Int
+  paid_at         DateTime?
+  payment_currency String?
+
+  @@unique([invoice_id, payment_id])
+}
+
+model Submission {
+  id             String   @id @default(uuid())
+  tool_sku        String
+  tool            Tool     @relation(fields: [tool_sku], references: [sku])
+  reviewer_email  String?
+  checklist       Json?    // {install_under_2h, one_job_only, ...}
+  decision        SubmissionDecision?
+  reviewed_at     DateTime?
+}

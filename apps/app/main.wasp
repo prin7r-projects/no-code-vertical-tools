@@ -1,0 +1,230 @@
+app TradeToolset {
+  wasp: {
+    version: "^0.23.0"
+  },
+
+  title: "TradeToolset",
+
+  head: [
+    "<link rel='icon' href='/favicon.ico' />",
+    "<meta name='description' content='Catalog of vertical no-code tools for tradespeople.' />",
+    "<meta name='author' content='Prin7r' />",
+    "<meta name='keywords' content='no-code, tools, trades, HVAC, plumbing, electrical' />",
+    "<meta property='og:type' content='website' />",
+    "<meta property='og:title' content='TradeToolset' />",
+    "<meta property='og:site_name' content='TradeToolset' />",
+    "<meta property='og:url' content='https://no-code-vertical-tools.prin7r.com' />",
+    "<meta property='og:description' content='Catalog of vertical no-code tools for tradespeople.' />",
+    "<meta property='og:image' content='https://no-code-vertical-tools.prin7r.com/public-banner.webp' />",
+  ],
+
+  auth: {
+    userEntity: User,
+    methods: {
+      email: {
+        fromField: {
+          name: "TradeToolset",
+          email: "noreply@tradetoolset.prin7r.com"
+        },
+        emailVerification: {
+          clientRoute: EmailVerificationRoute,
+          getEmailContentFn: import { getVerificationEmailContent } from "@src/auth/emails",
+        },
+        passwordReset: {
+          clientRoute: PasswordResetRoute,
+          getEmailContentFn: import { getPasswordResetEmailContent } from "@src/auth/emails",
+        },
+        userSignupFields: import { getEmailUserFields } from "@src/auth/userSignupFields",
+      },
+    },
+    onAuthFailedRedirectTo: "/login",
+    onAuthSucceededRedirectTo: "/dashboard",
+  },
+
+  db: {
+    seeds: [
+      import { seedMockData } from "@src/server/scripts/dbSeeds",
+    ]
+  },
+
+  client: {
+    rootComponent: import { App } from "@src/client/App",
+  },
+
+  server: {
+    envValidationSchema: import { serverEnvValidationSchema } from "@src/env",
+  },
+
+  emailSender: {
+    provider: Postmark,
+    defaultFrom: {
+      name: "TradeToolset",
+      email: "noreply@tradetoolset.prin7r.com"
+    },
+  },
+}
+
+// Entities
+entity User {=psl
+  model User {
+    id        String   @id @default(uuid())
+    createdAt DateTime @default(now())
+
+    email     String?  @unique
+    role      Role     @default(buyer)
+
+    isAdmin   Boolean  @default(false)
+  }
+psl=}
+
+entity Builder {=psl
+  model Builder {
+    id               String   @id @default(uuid())
+    userId           String?  @unique
+    user             User?    @relation(fields: [userId], references: [id])
+
+    email            String
+    payout_currency  String
+    payout_address   String
+    rev_share_pct    Int      @default(70)
+
+    tools            Tool[]
+  }
+psl=}
+
+entity Buyer {=psl
+  model Buyer {
+    id             String   @id @default(uuid())
+    userId         String?  @unique
+    user           User?    @relation(fields: [userId], references: [id])
+
+    email          String   @unique
+    trade          String?
+    first_seen_at  DateTime @default(now())
+
+    subscriptions  Subscription[]
+  }
+psl=}
+
+entity Tool {=psl
+  model Tool {
+    sku             String   @id
+    trade           String
+    one_job         String
+    install_link    String?
+    install_minutes Int
+    price_cents     Int
+    status          ToolStatus @default(draft)
+    builder_id      String
+    builder         Builder   @relation(fields: [builder_id], references: [id])
+    listed_at       DateTime?
+
+    subscriptions   Subscription[]
+    submissions     Submission[]
+
+    @@index([trade])
+  }
+psl=}
+
+entity Subscription {=psl
+  model Subscription {
+    id             String   @id @default(uuid())
+    tool_sku        String
+    tool            Tool     @relation(fields: [tool_sku], references: [sku])
+    buyer_id        String
+    buyer           Buyer    @relation(fields: [buyer_id], references: [id])
+    status          SubscriptionStatus @default(active)
+    started_at      DateTime @default(now())
+    ends_at         DateTime?
+
+    orders          Order[]
+
+    @@index([status])
+  }
+psl=}
+
+entity Order {=psl
+  model Order {
+    id             String   @id @default(uuid())
+    subscription_id String
+    subscription    Subscription @relation(fields: [subscription_id], references: [id])
+    invoice_id      String?
+    payment_id      String?
+    amount_cents    Int
+    paid_at         DateTime?
+    payment_currency String?
+
+    @@unique([invoice_id, payment_id])
+  }
+psl=}
+
+entity Submission {=psl
+  model Submission {
+    id             String   @id @default(uuid())
+    tool_sku        String
+    tool            Tool     @relation(fields: [tool_sku], references: [sku])
+    reviewer_email  String?
+    checklist       Json?
+    decision        SubmissionDecision?
+    reviewed_at     DateTime?
+  }
+psl=}
+
+// Auth Pages
+route LoginRoute { path: "/login", to: LoginPage }
+page LoginPage {
+  component: import { Login } from "@src/auth/LoginPage"
+}
+
+route SignupRoute { path: "/signup", to: SignupPage }
+page SignupPage {
+  component: import { Signup } from "@src/auth/SignupPage"
+}
+
+route RequestPasswordResetRoute { path: "/request-password-reset", to: RequestPasswordResetPage }
+page RequestPasswordResetPage {
+  component: import { RequestPasswordResetPage } from "@src/auth/email-and-pass/RequestPasswordResetPage",
+}
+
+route PasswordResetRoute { path: "/password-reset", to: PasswordResetPage }
+page PasswordResetPage {
+  component: import { PasswordResetPage } from "@src/auth/email-and-pass/PasswordResetPage",
+}
+
+route EmailVerificationRoute { path: "/email-verification", to: EmailVerificationPage }
+page EmailVerificationPage {
+  component: import { EmailVerificationPage } from "@src/auth/email-and-pass/EmailVerificationPage",
+}
+
+// App Routes
+route DashboardRoute { path: "/dashboard", to: DashboardPage }
+page DashboardPage {
+  authRequired: true,
+  component: import { DashboardPage } from "@src/dashboard/DashboardPage"
+}
+
+// Operator Routes
+route OperatorQueueRoute { path: "/operator/queue", to: OperatorQueuePage }
+page OperatorQueuePage {
+  authRequired: true,
+  component: import { OperatorQueuePage } from "@src/operator/OperatorQueuePage"
+}
+
+// Builder Routes
+route BuilderDashboardRoute { path: "/builders/me", to: BuilderDashboardPage }
+page BuilderDashboardPage {
+  authRequired: true,
+  component: import { BuilderDashboardPage } from "@src/builder/BuilderDashboardPage"
+}
+
+// Buyer Routes
+route BuyerSubscriptionsRoute { path: "/me/subscriptions", to: BuyerSubscriptionsPage }
+page BuyerSubscriptionsPage {
+  authRequired: true,
+  component: import { BuyerSubscriptionsPage } from "@src/buyer/BuyerSubscriptionsPage"
+}
+
+route NotFoundRoute { path: "*", to: NotFoundPage }
+page NotFoundPage {
+  component: import { NotFoundPage } from "@src/client/components/NotFoundPage"
+}
