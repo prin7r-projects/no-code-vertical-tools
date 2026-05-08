@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  /* [TOOLSHELF_DARK_PIVOT 2026-05-08] Linear Midnight Command Center alignment.
+  /* [TRADETOOLSET_DARK_PIVOT 2026-05-08] Linear Midnight Command Center alignment.
    * Was: #0c0d0e bg + #f76d3c orange accent. Now: pitch-black + neon-lime per
    * /Users/keer/projects/prin7r/design-references/linear.md. Surfaces ramp
    * canvas → graphite → deep-slate → charcoal-grey to mirror Linear's

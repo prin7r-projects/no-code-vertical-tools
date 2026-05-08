@@ -6,7 +6,7 @@ This is the source-of-truth markdown for the deck. The self-contained HTML versi
 
 ## Slide 1 — Cover
 
-# Toolshelf
+# TradeToolset
 **A catalog of vertical-specific no-code tools.**
 One tool per niche pain point. Pick from the shelf, install in an afternoon, $39/mo, cancel any time.
 
@@ -33,20 +33,20 @@ We sell her option four: **a $39/mo SKU off a catalog.**
 
 | SKU | Vertical | Tool | Status |
 |---|---|---|---|
-| TS-HVAC-002 | HVAC | Quote generator | live |
-| TS-DENT-004 | Dental | No-show predictor | live |
-| TS-REST-007 | Restaurant | Table-turn optimizer | live |
-| TS-SALN-001 | Salon / spa | Rebook reminder | live |
-| TS-AGEN-003 | Agency | Invoice chaser | live |
-| TS-SAOPS-005 | SaaS-ops | Churn flag | live |
-| TS-ECOM-006 | E-commerce | Cart-to-WhatsApp | live |
-| TS-ROOF-008 | Roofing | Scope-of-work emailer | draft · q3 |
+| TT-HVAC-002 | HVAC | Quote generator | live |
+| TT-DENT-004 | Dental | No-show predictor | live |
+| TT-REST-007 | Restaurant | Table-turn optimizer | live |
+| TT-SALN-001 | Salon / spa | Rebook reminder | live |
+| TT-AGEN-003 | Agency | Invoice chaser | live |
+| TT-SAOPS-005 | SaaS-ops | Churn flag | live |
+| TT-ECOM-006 | E-commerce | Cart-to-WhatsApp | live |
+| TT-ROOF-008 | Roofing | Scope-of-work emailer | draft · q3 |
 
 Each tool is a working no-code template, branded, wired to existing tools.
 
 ---
 
-## Slide 4 — Anatomy of a tool (TS-HVAC-002)
+## Slide 4 — Anatomy of a tool (TT-HVAC-002)
 
 Six pieces, every time. Only the names of the parts change between verticals.
 
@@ -92,7 +92,7 @@ We pay 70% to vertical operators who publish.
 
 **For Daniyar**: list, distribute, KYC, support escalation, billing — done. He builds. He gets paid monthly.
 
-**For Toolshelf**: we don't run a 200-tool platform with twelve generalists. The shelf is curated by the trades themselves.
+**For TradeToolset**: we don't run a 200-tool platform with twelve generalists. The shelf is curated by the trades themselves.
 
 ---
 
@@ -132,11 +132,11 @@ Wave 2 is funded by the Prin7r portfolio. **No outside ask.**
 What we want from a reader of this deck:
 
 - If you're a trade owner-operator: install one tool. $39, cancel any time.
-- If you're a vertical no-code builder: apply to publish at `builders@toolshelf.cash`.
-- If you write a vertical newsletter or moderate a vertical FB group: we sponsor honestly. Reach out at `partners@toolshelf.cash`.
+- If you're a vertical no-code builder: apply to publish at `builders@tradetoolset.com`.
+- If you write a vertical newsletter or moderate a vertical FB group: we sponsor honestly. Reach out at `partners@tradetoolset.com`.
 
 ---
 
 > The shelf, on display.
 >
-> `TOOLSHELF · A CATALOG OF SHARP TOOLS · MMXXVI`
+> `TRADETOOLSET · A CATALOG OF SHARP TOOLS · MMXXVI`

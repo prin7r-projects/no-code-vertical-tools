@@ -13,7 +13,7 @@ The buyer is not on LinkedIn. The buyer is in a Facebook group with 1,400 member
 | Builder-side: Indie Hackers, X (formerly Twitter) no-code corner | Owned earned | 10% | Recruits Daniyar-shaped builders |
 | Builder-side: Bubble + Webflow showcase pages | Owned earned | 5% | Distribution into the no-code freelancer pool |
 | Direct outbound (P1 list curated from FB group + LinkedIn) | Sales-led | 10% | Slow but converts at 4-7% |
-| SEO / catalog page + tool-specific landing routes | Long-term | 5% | TS-HVAC-002 ranks for "HVAC quote generator" by month 4 |
+| SEO / catalog page + tool-specific landing routes | Long-term | 5% | TT-HVAC-002 ranks for "HVAC quote generator" by month 4 |
 
 Total ad spend Wave 2: cap $1,500/mo, almost entirely sponsored newsletter slots and trade-association sponsorships. No Meta/Google paid until we have buyer-side conversion data.
 
@@ -24,13 +24,13 @@ Total ad spend Wave 2: cap $1,500/mo, almost entirely sponsored newsletter slots
 ### Vertical Facebook groups
 
 - 11 groups identified (Charlotte HVAC Contractors, NC HVAC Owners, BC Dental Practice Managers, Independent Restaurant Owners FB, etc.). Each has a moderator who's a peer-trader (not a vendor).
-- **Tactic**: we don't post ads. We sponsor the *moderator* with a free install of one tool in exchange for a screenshot post when it works. Honest disclosure (Toolshelf gave me this for free).
+- **Tactic**: we don't post ads. We sponsor the *moderator* with a free install of one tool in exchange for a screenshot post when it works. Honest disclosure (TradeToolset gave me this for free).
 - **Cost**: the install + 1 month of tuning. Roughly $80 per moderator-relationship.
-- **Expected conversion**: 1.2-2.0% of group readers visit toolshelf within 14 days; of those, 3-5% install.
+- **Expected conversion**: 1.2-2.0% of group readers visit tradetoolset within 14 days; of those, 3-5% install.
 
 ### Subreddits
 
-- We *don't* shill. We answer questions where the answer is genuinely "Toolshelf TS-HVAC-002 does this for $39." When it isn't, we say so.
+- We *don't* shill. We answer questions where the answer is genuinely "TradeToolset TT-HVAC-002 does this for $39." When it isn't, we say so.
 - **Tactic**: a pinned answer-author account that responds to "anyone got a quote PDF that doesn't suck?" type threads. We disclose affiliation. The mods of `/r/HVAC` already allow this style of post.
 - **Cost**: 4 hours/week of an operator's time.
 - **Expected conversion**: long-tail; first 6 months feel slow, then a single archived thread carries 200-400 visits/month.
@@ -38,7 +38,7 @@ Total ad spend Wave 2: cap $1,500/mo, almost entirely sponsored newsletter slots
 ### Trade-association newsletters and quarterly calls
 
 - ACCA HVAC News (~14k newsletter subscribers, ~$1,200 sponsored slot), AGD Impact (dental, 15k subs, ~$1,800 slot), AHLA salon-spa (~$600 slot), local restaurant associations ($150-400/slot).
-- **Tactic**: text-only sponsor blurb (160-220 chars), ends with "Catalog at toolshelf.cash". No banner.
+- **Tactic**: text-only sponsor blurb (160-220 chars), ends with "Catalog at tradetoolset.com". No banner.
 - **Cost**: $1,000-1,800 per slot. Cap $1,500/mo.
 - **Expected conversion**: 0.6-1.4% click → 4-6% install on the click.
 
@@ -57,7 +57,7 @@ Total ad spend Wave 2: cap $1,500/mo, almost entirely sponsored newsletter slots
 
 ### Bubble + Webflow showcase pages
 
-- Each Toolshelf tool has its own showcase entry on the relevant no-code platform's gallery. The showcase points back to the catalog. This is mostly an SEO play.
+- Each TradeToolset tool has its own showcase entry on the relevant no-code platform's gallery. The showcase points back to the catalog. This is mostly an SEO play.
 
 ### Direct outbound (P1)
 
@@ -86,7 +86,7 @@ Total ad spend Wave 2: cap $1,500/mo, almost entirely sponsored newsletter slots
 
 ## Lead handoff
 
-- **Buyer-side**: visitor → catalog → install button → NOWPayments hosted invoice → paid → email to `orders@toolshelf.cash` (Wave 2 manual install) → install call within 24 hours.
-- **Builder-side**: applicant → email to `builders@toolshelf.cash` → 3-business-day response → brief + brand asset bundle → 30-day build-and-review cycle → catalog listing → first install → 5th-of-month payout.
+- **Buyer-side**: visitor → catalog → install button → NOWPayments hosted invoice → paid → email to `orders@tradetoolset.com` (Wave 2 manual install) → install call within 24 hours.
+- **Builder-side**: applicant → email to `builders@tradetoolset.com` → 3-business-day response → brief + brand asset bundle → 30-day build-and-review cycle → catalog listing → first install → 5th-of-month payout.
 
 Both sides are deliberately email-based until Wave 3 ships the in-app portals.

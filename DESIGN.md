@@ -1,6 +1,6 @@
-# DESIGN.md — Toolshelf
+# DESIGN.md — TradeToolset
 
-> Canonical design + style guide for `no-code-vertical-tools.prin7r.com` (brand: **Toolshelf**).
+> Canonical design + style guide for `no-code-vertical-tools.prin7r.com` (brand: **TradeToolset**).
 > Owned by Chief of Design. Kept in sync with `apps/landing/` — any landing-page change updates this file in the same commit.
 
 The visual identity is sourced from [`docs/01-brand-identity.md`](docs/01-brand-identity.md). This document is the implementation-facing translation of that identity into tokens, components, layout rules, and verification artifacts.
@@ -9,9 +9,9 @@ The visual identity is sourced from [`docs/01-brand-identity.md`](docs/01-brand-
 
 ## 1. Product and audience
 
-**Product.** Toolshelf is a catalog of vertical-specific no-code micro-apps. Each tool does *one* job for *one* trade — an HVAC quote generator, a dental no-show predictor, a restaurant table-turn optimizer, a salon rebook reminder, a roofing scope-of-work emailer, an auto-shop bay scheduler. Every tool is its own product with its own price; the platform houses the catalog, the install button, the shared billing, and a small builder portal for vertical operators who want to publish their own tool.
+**Product.** TradeToolset is a catalog of vertical-specific no-code micro-apps. Each tool does *one* job for *one* trade — an HVAC quote generator, a dental no-show predictor, a restaurant table-turn optimizer, a salon rebook reminder, a roofing scope-of-work emailer, an auto-shop bay scheduler. Every tool is its own product with its own price; the platform houses the catalog, the install button, the shared billing, and a small builder portal for vertical operators who want to publish their own tool.
 
-We are explicitly the *opposite* of the "build anything" no-code rainbow. Toolshelf says: pick a tool, install it, use it Tuesday. No prompt, no schema, no setup call. The shop has shelves, the shelves have tools, the tools have one job.
+We are explicitly the *opposite* of the "build anything" no-code rainbow. TradeToolset says: pick a tool, install it, use it Tuesday. No prompt, no schema, no setup call. The shop has shelves, the shelves have tools, the tools have one job.
 
 **Primary audience.** Solo operators and 2-12-person small businesses in the trade verticals — HVAC, dental, restaurants, salons, agencies, ecom merchants, roofers, body shops, gyms. They've watched two no-code agency demos, gotten a $14,000 quote and a six-week timeline, and bounced. They know what they want; they want a button labeled "install on my Bubble / Webflow / Airtable account, charge me $39 a month, and never call me."
 
@@ -24,7 +24,7 @@ We are explicitly the *opposite* of the "build anything" no-code rainbow. Toolsh
 The brand is **a tool shop, not a software studio**. Every tool on the shelf has:
 - A name, a vertical, a one-line promise, a price, an install button
 - A tiny screenshot mounted in a 6px-radius card
-- A SKU-style identifier (`TS-HVAC-002`) so it feels catalogued, not curated by a designer
+- A SKU-style identifier (`TT-HVAC-002`) so it feels catalogued, not curated by a designer
 
 The visual is a **Linear Midnight Command Center** rendered as a tool catalog: pitch-black canvas (`#08090a`), graphite/deep-slate surface ramp, neon-lime (`#e4f222`) as the single accent. Linear's dark UI discipline is exactly the right frame for a multi-tool catalog; a buyer scans 8 SKUs the way they scan an issue queue. We adopt Linear's full token system (Inter Variable + Berkeley/JetBrains Mono, 6px radii, layered surfaces) and use **neon-lime** for primary CTAs, active filter chips, and the live status dot — the way Linear uses it for the primary action button.
 
@@ -45,7 +45,7 @@ Do's:
 
 ## 3. ShadCN baseline and local component policy
 
-Wave 2 batch landings still ship as hand-rolled Tailwind components for build-speed reasons (no ShadCN registry pull this batch). The token system below is **ShadCN-baseline-compatible** — every CSS variable maps to a ShadCN slot (`--background`, `--foreground`, `--primary`, `--card`, `--border`, `--ring`) so when `apps/app/` ships and pulls `pnpm dlx shadcn@latest add button card input badge`, the imported components will inherit the Toolshelf palette automatically.
+Wave 2 batch landings still ship as hand-rolled Tailwind components for build-speed reasons (no ShadCN registry pull this batch). The token system below is **ShadCN-baseline-compatible** — every CSS variable maps to a ShadCN slot (`--background`, `--foreground`, `--primary`, `--card`, `--border`, `--ring`) so when `apps/app/` ships and pulls `pnpm dlx shadcn@latest add button card input badge`, the imported components will inherit the TradeToolset palette automatically.
 
 **Exceptions to ShadCN baseline:**
 - `ToolCard`, `ShelfFilter`, `SkuTag` — three project-owned components that do not exist in ShadCN. Source lives in `apps/landing/app/components/`, reviewed locally.
@@ -56,7 +56,7 @@ Wave 2 batch landings still ship as hand-rolled Tailwind components for build-sp
 The canonical palette is six colors plus three semantic tokens. Hex values are the source of truth; CSS variables are the implementation.
 
 Linear-aligned palette (Wave 2 design refresh 2026-05-08). The names retain
-the Toolshelf metaphor; the hex values now match Linear's reference tokens
+the TradeToolset metaphor; the hex values now match Linear's reference tokens
 1:1 (see `/Users/keer/projects/prin7r/design-references/linear.md`).
 
 | Name | Hex | Linear analog | Token | Role |
@@ -80,7 +80,7 @@ exact pattern — neon-lime on pitch-black is the brand signature stamp).
 **Display + body.** Inter Variable (Google Fonts). Weights used: 400 / 510 / 590 / 680. Tight letter-spacing on display sizes (`-0.02em` at 72px down to `-0.005em` at 14px). All body copy is `font-feature-settings: 'cv01', 'ss03';`.
 
 **Mono.** JetBrains Mono (Google Fonts) — the open substitute for the Berkeley Mono pattern. Weights 400/500. Used for:
-- Tool SKUs (`TS-HVAC-002`, `TS-DENT-004`)
+- Tool SKUs (`TT-HVAC-002`, `TT-DENT-004`)
 - Prices (`$39 / mo`)
 - Filter labels (`vertical: hvac`, `category: ops`)
 - Inline code in docs
@@ -124,7 +124,7 @@ No glow, no blur, no offset shadow > 8px y-axis.
 
 **Header.** 56px tall, sticky, blurred surface (`backdrop-filter: blur(8px); background: rgba(12,13,14,.78)`). Logo (left), nav (`Catalog · Verticals · Build · Pricing`), CTA `Open the shelf` (right).
 
-**Footer.** 4-col grid: brand + tagline · catalog (8 tools) · for builders (publish, payouts, IPN, status) · legal (terms, privacy, refund). 64px section padding above. Mono lock-up at the bottom: `TOOLSHELF · A CATALOG OF SHARP TOOLS · MMXXVI`.
+**Footer.** 4-col grid: brand + tagline · catalog (8 tools) · for builders (publish, payouts, IPN, status) · legal (terms, privacy, refund). 64px section padding above. Mono lock-up at the bottom: `TRADETOOLSET · A CATALOG OF SHARP TOOLS · MMXXVI`.
 
 ## 8. Component catalog
 
@@ -146,7 +146,7 @@ Hand-rolled, ShadCN-token-compatible:
 The landing is intentionally one long page. The shelf and the tools must appear in the first 1.5 viewports.
 
 1. **Header** (sticky, 56px). Logo · `Catalog · Verticals · Build · Pricing` · CTA `Open the shelf`.
-2. **Hero — the shelf-first hero.** Display title (max two lines): *No-code, but only the tools that work for one trade.* Sub-line (body-lg, Solder): one paragraph explaining catalog-not-platform. Mono caption with three tool SKUs scrolling in: `TS-HVAC-002 · TS-DENT-004 · TS-REST-007`. Right side: a 4-up tool card preview (HVAC quote generator, dental no-show predictor, restaurant table-turn, salon rebook reminder).
+2. **Hero — the shelf-first hero.** Display title (max two lines): *No-code, but only the tools that work for one trade.* Sub-line (body-lg, Solder): one paragraph explaining catalog-not-platform. Mono caption with three tool SKUs scrolling in: `TT-HVAC-002 · TT-DENT-004 · TT-REST-007`. Right side: a 4-up tool card preview (HVAC quote generator, dental no-show predictor, restaurant table-turn, salon rebook reminder).
 3. **Catalog peek** — the *6+ tool catalog* in a 3-or-4-col grid. Real names, real SKUs, real promises, real prices. This is the headline section. Each card has the `Install` neon-lime CTA.
 4. **By vertical filter** — chip rail: `HVAC · Dental · Restaurant · SaaS-ops · Agency-ops · E-commerce`. Selecting one filters the catalog above. Implementation: pure CSS class toggle, no SPA. Default state: all filters active.
 5. **Tool anatomy** — *what's inside one tool* (worked example: HVAC quote generator). Diagram (mermaid-style, hand-drawn) showing the 6 pieces: input form / pricing rules / branded PDF / Stripe-or-crypto pay link / SMS notifier / dashboard. Each piece labelled with mono. Below: "this is the same anatomy for every tool on the shelf — only the names of the parts change."
@@ -155,18 +155,18 @@ The landing is intentionally one long page. The shelf and the tools must appear 
    - **Bundle** — $129 / mo for any 5 tools from one vertical. Recommended.
    - **Builder** — $0 + 30% rev-share. Publish your own tool to the shelf. Payout in USDT to your wallet. KYC handled by NOWPayments.
    Each card has its own `pay >` neon-lime CTA. The Single and Bundle CTAs invoke the NOWPayments hosted invoice flow.
-7. **Builder section — submit a tool.** Heading: *We pay 70% to vertical operators who publish.* Body: three steps (1) describe the workflow (2) we ship the no-code template (3) you keep 70% on every install. CTA: `pay >` (or `apply >`) — opens an email with a pre-fill: `subject: I want to publish a TS-XXXX tool`.
+7. **Builder section — submit a tool.** Heading: *We pay 70% to vertical operators who publish.* Body: three steps (1) describe the workflow (2) we ship the no-code template (3) you keep 70% on every install. CTA: `pay >` (or `apply >`) — opens an email with a pre-fill: `subject: I want to publish a TT-XXXX tool`.
 8. **FAQ** — 8 questions covering: refund policy, install delay, vertical fit, custom tools, payouts, KYC, source-code ownership, churn.
 9. **Footer** — 4-col grid as in §7.
 
 ## 10. Imagery and generated asset rules
 
-Toolshelf is intentionally low-imagery. The art is the catalog itself. Allowed asset types:
+TradeToolset is intentionally low-imagery. The art is the catalog itself. Allowed asset types:
 - Tiny screenshots inside ToolCards — these can be SVG mockups (no external assets required).
 - Tool anatomy diagram — inline SVG, hand-drawn-feel paths, no PNG.
 - A small workshop-wall divider SVG between sections (1px hairline with a 6px neon-lime dot every 32px).
 
-Generated imagery (GPT Image 2 / `prin7r-generate-image`) — **deferred for Wave 2 build**. If we later use it, prompt template: `"a precise tool catalog page at a workshop, dark gunmetal table, neon-lime labels, tools shot from above, label tag with SKU TS-XXXX, hyperreal photography, no background blur, no people"`. Aspect 12:5, hero use only. **As of this build:** no generated assets are shipped — we use SVG only — and `apps/landing/public/generated/` is intentionally empty.
+Generated imagery (GPT Image 2 / `prin7r-generate-image`) — **deferred for Wave 2 build**. If we later use it, prompt template: `"a precise tool catalog page at a workshop, dark gunmetal table, neon-lime labels, tools shot from above, label tag with SKU TT-XXXX, hyperreal photography, no background blur, no people"`. Aspect 12:5, hero use only. **As of this build:** no generated assets are shipped — we use SVG only — and `apps/landing/public/generated/` is intentionally empty.
 
 ## 11. Motion and interaction rules
 
@@ -199,12 +199,13 @@ These are also embedded in `README.md` and linked here.
 
 ## 14. External references and library sources
 
-- [Linear style reference](../../design-references/linear.md) — palette discipline, layered dark surfaces, 6px radii, Inter+Mono pair, single accent. **Aligned post-2026-05-08 refresh** to neon-lime accent (Linear's signature) and the full pitch-black/graphite/deep-slate/charcoal-grey surface ramp. The hero remains catalog-first (not slogan-first) — the Toolshelf brand.
+- [Linear style reference](../../design-references/linear.md) — palette discipline, layered dark surfaces, 6px radii, Inter+Mono pair, single accent. **Aligned post-2026-05-08 refresh** to neon-lime accent (Linear's signature) and the full pitch-black/graphite/deep-slate/charcoal-grey surface ramp. The hero remains catalog-first (not slogan-first) — the TradeToolset brand.
 - [Refero Styles](https://styles.refero.design/) — searchable design-token gallery; consulted for catalog-grid patterns.
 - Workshop / hardware-store inventory aesthetic — Snap-on, Wera, Knipex catalog page conventions (SKU + price + photo + install).
 - Linear (visual reference, not clone), Vercel (header pattern), Stripe (pricing card density).
 
 ## 15. Changelog
 
-- **2026-05-08 design refresh — Linear pitch-black + neon-lime pivot.** Wave 2 design refresh per `wave2-design-references.json` mapping (`primary: linear`). Replaced full Toolshelf palette with Linear-spec tokens: bg `#0c0d0e → #08090a` (pitch-black), surface `#16181b → #0f1011` (graphite), surface-2 `#1d2024 → #161718` (deep-slate), border `#2a2e34 → #23252a` (charcoal-grey), fg `#f3efe7 → #f7f8f8` (porcelain), muted `#9aa0a8 → #8a8f98` (storm-cloud), accent `#f76d3c → #e4f222` (neon-lime), accent-deep `#cf5527 → #c2cf1c`, ok `#7be0a6 → #27a644` (emerald). Updated globals.css CSS vars + comments, tailwind.config.ts (CSS-var-driven so cascade is automatic), all 8 tool-card SVG previews in page.tsx (hardcoded hex values bulk-remapped), and `app/icon.svg`. Focus ring updated from rgba persimmon to rgba neon-lime. Brand voice / catalog-first hero / six verticals / NOWPayments wiring all preserved. Reference: `/Users/keer/projects/prin7r/design-references/linear.md`.
-- **2026-05-08** — Initial DESIGN.md. Brand: Toolshelf. Persimmon accent on workshop-black canvas. Catalog-first hero with 8-tool shelf. Inter + JetBrains Mono. Six tool verticals (HVAC / dental / restaurant / SaaS-ops / agency-ops / e-commerce). Three pricing tiers with NOWPayments crypto CTA. SaaS app folder stubbed. Wave 2 v2-bar landing.
+- **2026-05-08 design refresh — Linear pitch-black + neon-lime pivot.** Wave 2 design refresh per `wave2-design-references.json` mapping (`primary: linear`). Replaced full TradeToolset palette with Linear-spec tokens: bg `#0c0d0e → #08090a` (pitch-black), surface `#16181b → #0f1011` (graphite), surface-2 `#1d2024 → #161718` (deep-slate), border `#2a2e34 → #23252a` (charcoal-grey), fg `#f3efe7 → #f7f8f8` (porcelain), muted `#9aa0a8 → #8a8f98` (storm-cloud), accent `#f76d3c → #e4f222` (neon-lime), accent-deep `#cf5527 → #c2cf1c`, ok `#7be0a6 → #27a644` (emerald). Updated globals.css CSS vars + comments, tailwind.config.ts (CSS-var-driven so cascade is automatic), all 8 tool-card SVG previews in page.tsx (hardcoded hex values bulk-remapped), and `app/icon.svg`. Focus ring updated from rgba persimmon to rgba neon-lime. Brand voice / catalog-first hero / six verticals / NOWPayments wiring all preserved. Reference: `/Users/keer/projects/prin7r/design-references/linear.md`.
+- **2026-05-08** — Initial DESIGN.md. Brand: TradeToolset. Persimmon accent on workshop-black canvas. Catalog-first hero with 8-tool shelf. Inter + JetBrains Mono. Six tool verticals (HVAC / dental / restaurant / SaaS-ops / agency-ops / e-commerce). Three pricing tiers with NOWPayments crypto CTA. SaaS app folder stubbed. Wave 2 v2-bar landing.
+- **2026-05-08 (rebrand)** — Brand renamed from **Toolshelf** → **TradeToolset** to avoid live competitor collision with `toolshelf.tech` (live "ToolShelf — Free Developer Tools" product, active 2025 blog posts on n8n / OpenAI vs Google AI agents — direct collision in dev/no-code tools space). New domain `tradetoolset.com` (verified available). Brand essence shifts from "shelf in a workshop" → "curated toolset for trades" (still SKU-style catalog). Wordmark monogram updates: Tt replaces T. SKU prefix `TS-XXX-NNN` → `TT-XXX-NNN` across catalog (TS-HVAC-002 → TT-HVAC-002 etc). Linear pitch-black / neon-lime palette and Inter + JetBrains Mono typography preserved unchanged — Agent I's persimmon→Linear-ref hex sweep is intact, no regressions. Email handles `*@toolshelf.cash` → `*@tradetoolset.com`. Container name `toolshelf-landing` → `tradetoolset-landing`. Logo SVG geometry (3 horizontal rails + 3 vertical tools) preserved as a "set of tools" reading.

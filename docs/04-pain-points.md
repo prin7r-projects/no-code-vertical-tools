@@ -85,7 +85,7 @@ We talked to 17 small-business owners across these verticals (notes in `wave2-re
 - "If I cancel I keep what we built. I don't want to be back to zero."
 - "Show me the price before the call."
 
-That's exactly the brief. Toolshelf is the answer.
+That's exactly the brief. TradeToolset is the answer.
 
 ---
 

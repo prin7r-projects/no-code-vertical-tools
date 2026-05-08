@@ -1,5 +1,5 @@
 /**
- * [TOOLSHELF_NOWPAYMENTS_CHECKOUT] POST /api/checkout/nowpayments
+ * [TRADETOOLSET_NOWPAYMENTS_CHECKOUT] POST /api/checkout/nowpayments
  *
  * Body:    { plan: "single" | "bundle" | "builder" }
  * Returns: { invoice_url: string, invoice_id: string, plan: string, mode: "live" }
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
       {
         error: "no_invoice_for_plan",
         message:
-          "Builder tier is publish-and-share — not a paid checkout. Apply by email at builders@toolshelf.cash."
+          "Builder tier is publish-and-share — not a paid checkout. Apply by email at builders@tradetoolset.com."
       },
       { status: 400 }
     );
@@ -76,7 +76,7 @@ export async function POST(request: Request) {
           error: "missing_env",
           missing: error.envName,
           message:
-            "NOWPayments is not configured on this deployment yet. Email orders@toolshelf.cash and we'll send the invoice manually."
+            "NOWPayments is not configured on this deployment yet. Email orders@tradetoolset.com and we'll send the invoice manually."
         },
         { status: 503 }
       );

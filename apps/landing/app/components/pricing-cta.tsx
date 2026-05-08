@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * [TOOLSHELF_CHECKOUT_CTA] Client component for tier checkout.
+ * [TRADETOOLSET_CHECKOUT_CTA] Client component for tier checkout.
  *
  * On click, POSTs to /api/checkout/nowpayments with { plan }, then redirects
  * to the returned NOWPayments hosted invoice URL. Same UX pattern as the
@@ -60,7 +60,7 @@ export function PricingCta({
             missingEnv: true,
             message:
               data.message ||
-              "Crypto checkout is being wired right now. Email orders@toolshelf.cash and we'll send the invoice manually."
+              "Crypto checkout is being wired right now. Email orders@tradetoolset.com and we'll send the invoice manually."
           });
           return;
         }
@@ -68,7 +68,7 @@ export function PricingCta({
           kind: "error",
           message:
             data.message ||
-            `Checkout returned HTTP ${res.status}. Try again or email orders@toolshelf.cash.`
+            `Checkout returned HTTP ${res.status}. Try again or email orders@tradetoolset.com.`
         });
         return;
       }
@@ -81,13 +81,13 @@ export function PricingCta({
 
       setStatus({
         kind: "error",
-        message: "No invoice URL returned. Please email orders@toolshelf.cash."
+        message: "No invoice URL returned. Please email orders@tradetoolset.com."
       });
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Network error";
       setStatus({
         kind: "error",
-        message: `Could not reach checkout: ${msg}. Email orders@toolshelf.cash.`
+        message: `Could not reach checkout: ${msg}. Email orders@tradetoolset.com.`
       });
     }
   }
@@ -97,7 +97,7 @@ export function PricingCta({
     return (
       <a
         className={className}
-        href="mailto:builders@toolshelf.cash?subject=I%20want%20to%20publish%20a%20TS-%20tool&body=Vertical%3A%20%0AWorkflow%20it%20replaces%3A%20%0AStack%20I%20can%20build%20it%20on%3A%20%28Bubble%2FWebflow%2FAirtable%2FZapier%2FOther%29%0AFair%20monthly%20price%3A%20%240.00"
+        href="mailto:builders@tradetoolset.com?subject=I%20want%20to%20publish%20a%20TT-%20tool&body=Vertical%3A%20%0AWorkflow%20it%20replaces%3A%20%0AStack%20I%20can%20build%20it%20on%3A%20%28Bubble%2FWebflow%2FAirtable%2FZapier%2FOther%29%0AFair%20monthly%20price%3A%20%240.00"
       >
         <span className="t-mono">apply &gt;</span>
         <span>{label ?? "Apply to publish"}</span>

@@ -1,5 +1,5 @@
 /**
- * [TOOLSHELF_NOWPAYMENTS] Server-side helpers for the NOWPayments hosted invoice.
+ * [TRADETOOLSET_NOWPAYMENTS] Server-side helpers for the NOWPayments hosted invoice.
  *
  * - `PLANS` maps the three pricing tiers visible on the landing to their
  *   USD price + checkout copy. The setup-fee charge is what the customer
@@ -27,27 +27,27 @@ export type Plan = {
 export const PLANS: Record<PlanId, Plan> = {
   single: {
     id: "single",
-    name: "Toolshelf — Single tool",
+    name: "TradeToolset — Single tool",
     setupUsd: 39,
     monthlyUsd: 39,
     description:
-      "First month at $39 for one Toolshelf tool of your choice (HVAC quote generator, dental no-show predictor, restaurant table-turn optimizer, salon rebook reminder, agency-ops invoice chaser, ecom abandoned-cart booster). Includes the no-code template (Bubble/Webflow/Airtable per tool), branded delivery, install support over email, and the monthly tuning notes. Cancel any time."
+      "First month at $39 for one TradeToolset tool of your choice (HVAC quote generator, dental no-show predictor, restaurant table-turn optimizer, salon rebook reminder, agency-ops invoice chaser, ecom abandoned-cart booster). Includes the no-code template (Bubble/Webflow/Airtable per tool), branded delivery, install support over email, and the monthly tuning notes. Cancel any time."
   },
   bundle: {
     id: "bundle",
-    name: "Toolshelf — Vertical bundle",
+    name: "TradeToolset — Vertical bundle",
     setupUsd: 129,
     monthlyUsd: 129,
     description:
-      "First month at $129 for any 5 Toolshelf tools from a single vertical (e.g. all 5 HVAC tools, all 5 dental tools). Includes the install kit, the playbook PDF, a 30-minute onboarding call, and one tuning hour per month for the cohort."
+      "First month at $129 for any 5 TradeToolset tools from a single vertical (e.g. all 5 HVAC tools, all 5 dental tools). Includes the install kit, the playbook PDF, a 30-minute onboarding call, and one tuning hour per month for the cohort."
   },
   builder: {
     id: "builder",
-    name: "Toolshelf — Builder publish",
+    name: "TradeToolset — Builder publish",
     setupUsd: 0,
     monthlyUsd: 0,
     description:
-      "Publish your own tool to the Toolshelf catalog. We handle billing (NOWPayments USDT/USDC), distribution, and customer support escalation; you keep 70% of every sale, paid out monthly to your USDT wallet. Apply via builders@toolshelf.cash with vertical, workflow, and price."
+      "Publish your own tool to the TradeToolset catalog. We handle billing (NOWPayments USDT/USDC), distribution, and customer support escalation; you keep 70% of every sale, paid out monthly to your USDT wallet. Apply via builders@tradetoolset.com with vertical, workflow, and price."
   }
 };
 
@@ -82,7 +82,7 @@ export async function createNowpaymentsInvoice(
     ? "https://api-sandbox.nowpayments.io"
     : "https://api.nowpayments.io";
 
-  const orderId = `toolshelf_${input.plan.id}_${Date.now()}_${Math.random()
+  const orderId = `tradetoolset_${input.plan.id}_${Date.now()}_${Math.random()
     .toString(36)
     .slice(2, 8)}`;
 

@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.landing
-    image: toolshelf-landing:latest
-    container_name: toolshelf-landing
+    image: tradetoolset-landing:latest
+    container_name: tradetoolset-landing
     restart: unless-stopped
     expose:
       - "3000"

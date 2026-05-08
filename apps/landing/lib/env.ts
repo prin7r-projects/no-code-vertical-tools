@@ -1,5 +1,5 @@
 /**
- * [TOOLSHELF_ENV] Tiny env reader for /api/checkout/* and /api/webhooks/*.
+ * [TRADETOOLSET_ENV] Tiny env reader for /api/checkout/* and /api/webhooks/*.
  * Mirrors the surface used in payments-prototypes/src/lib/env.ts so the
  * Wave 2 batch is consistent across all 20 builds.
  */

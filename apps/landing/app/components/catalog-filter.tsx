@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * [TOOLSHELF_CATALOG_FILTER] Client component to filter ToolCards by vertical.
+ * [TRADETOOLSET_CATALOG_FILTER] Client component to filter ToolCards by vertical.
  *
  * The page renders all ToolCards with a data-vertical attribute. This component
  * controls visibility via a class on a wrapping <div>. No SPA — pure CSS

@@ -1,6 +1,6 @@
 # 01 — Brand Identity
 
-> Toolshelf — a catalog of vertical-specific no-code tools.
+> TradeToolset — a catalog of vertical-specific no-code tools.
 
 ## Brand pyramid
 
@@ -11,7 +11,7 @@
 
 ## Positioning statement
 
-For solo operators and small-business owners in the trades (HVAC, dental, restaurant, salon, agency, ecom, SaaS-ops) who already know what one workflow they want fixed, **Toolshelf** is a *catalog of vertical-specific no-code tools* that lets them install the right one in an afternoon for $39 a month, paid in stablecoin, unlike no-code agencies that quote $14,000 / six weeks for a "platform" the customer doesn't need, because every tool on the shelf is sized to one trade and one job, not "build anything."
+For solo operators and small-business owners in the trades (HVAC, dental, restaurant, salon, agency, ecom, SaaS-ops) who already know what one workflow they want fixed, **TradeToolset** is a *catalog of vertical-specific no-code tools* that lets them install the right one in an afternoon for $39 a month, paid in stablecoin, unlike no-code agencies that quote $14,000 / six weeks for a "platform" the customer doesn't need, because every tool on the shelf is sized to one trade and one job, not "build anything."
 
 ## Audience persona — primary (P1)
 
@@ -43,13 +43,13 @@ For solo operators and small-business owners in the trades (HVAC, dental, restau
 - Don't use rainbow gradients or "🚀" launch language.
 - Don't write hero copy that requires three reads.
 
-**Sample sentence**: *Toolshelf TS-HVAC-002 is a quote generator for HVAC contractors. It turns a 4-day truck-roll-to-quote gap into one afternoon. $39 a month, USDT pay, refund inside 30 days, you keep the Bubble files if you cancel.*
+**Sample sentence**: *TradeToolset TT-HVAC-002 is a quote generator for HVAC contractors. It turns a 4-day truck-roll-to-quote gap into one afternoon. $39 a month, USDT pay, refund inside 30 days, you keep the Bubble files if you cancel.*
 
 ## Visual system
 
 - **Palette** (5 + 2 semantic, all hex): see `DESIGN.md §4`. Wave 2 design refresh
   (2026-05-08) re-aligned the palette to Linear's reference tokens 1:1 (the
-  Toolshelf metaphor names are kept; the hex values now match Linear). See
+  TradeToolset metaphor names are kept; the hex values now match Linear). See
   `DESIGN.md §15` for the full pivot record.
   - `--bg #08090a` pitch-black (page canvas, Linear's pitch-black)
   - `--surface #0f1011` graphite (card surface)
@@ -89,6 +89,6 @@ For solo operators and small-business owners in the trades (HVAC, dental, restau
 
 ## Brand-line lock-ups
 
-- Header: `TOOLSHELF` in JetBrains Mono 13px, all caps.
-- Footer: `TOOLSHELF · A CATALOG OF SHARP TOOLS · MMXXVI` in JetBrains Mono 11px, 0.06em tracking.
+- Header: `TRADETOOLSET` in JetBrains Mono 13px, all caps.
+- Footer: `TRADETOOLSET · A CATALOG OF SHARP TOOLS · MMXXVI` in JetBrains Mono 11px, 0.06em tracking.
 - Pitch headline: *No-code, but only the tools that work for one trade.*

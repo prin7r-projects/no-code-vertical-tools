@@ -4,7 +4,7 @@
 
 **Primary motion: PLG with a manual install hand-off.**
 
-The buyer self-serves through the catalog → pricing → NOWPayments hosted invoice. When they pay, the install step is a 20-minute scheduled call with a Toolshelf operator (or a verified builder), not a self-serve wizard — until Wave 3 when the install wizard ships.
+The buyer self-serves through the catalog → pricing → NOWPayments hosted invoice. When they pay, the install step is a 20-minute scheduled call with a TradeToolset operator (or a verified builder), not a self-serve wizard — until Wave 3 when the install wizard ships.
 
 This hybrid is deliberate: a $39/mo product can't carry a sales-team-led motion, but the install step has *just enough complexity* (porting a Bubble template to the buyer's domain, importing 60 days of CSV data, branding the PDF) that a 20-minute install call beats any wizard we could ship in Wave 2.
 
@@ -16,7 +16,7 @@ We don't sell the builder seat — we recruit the builder. Application → revie
 
 ### Tier 1 — Single tool — $39 / mo
 
-- Includes 1 Toolshelf tool of the buyer's choice.
+- Includes 1 TradeToolset tool of the buyer's choice.
 - Branded delivery on the buyer's domain.
 - Email install support (24h response, weekdays).
 - Monthly one-page tuning note.
@@ -49,7 +49,7 @@ We don't sell the builder seat — we recruit the builder. Application → revie
 
 **Target buyer**: P2 (Daniyar) — vertical-specialist no-code builder.
 
-**Unit econ**: a builder's tool that does $10k MRR is a $3k/mo expense to Toolshelf in rev-share — but it's pure margin distribution; our cost is fixed (catalog page + payment rail + support escalation triage).
+**Unit econ**: a builder's tool that does $10k MRR is a $3k/mo expense to TradeToolset in rev-share — but it's pure margin distribution; our cost is fixed (catalog page + payment rail + support escalation triage).
 
 ---
 
@@ -83,7 +83,7 @@ Wave 2 month-6 MRR target: ~$7,800 = $93,600 ARR. This is intentionally modest; 
 
 > NOWPayments routes a card-to-stablecoin on-ramp at the same checkout. Pick "card" on the invoice page. We default to USDT/USDC because it costs us less per transaction (no $39 + 30¢ Stripe drag), and we pass the saving on. The card path works.
 
-### "What if Toolshelf shuts down?"
+### "What if TradeToolset shuts down?"
 
 > You keep the no-code project files (Bubble, Webflow, Airtable, Zapier). Customer billing stops; you can move it to your own Stripe over a weekend. Your data is yours. We don't hold it hostage. (FAQ Q8 makes this contractual.)
 
@@ -97,7 +97,7 @@ Wave 2 month-6 MRR target: ~$7,800 = $93,600 ARR. This is intentionally modest; 
 
 ### "Who's your founder / what's your background?"
 
-> Toolshelf is a Wave 2 build under the Prin7r portfolio (a portfolio of operator-built micro-products). The catalog is curated by trade specialists, not by generalists. We're not raising a round; we're cash-flow first.
+> TradeToolset is a Wave 2 build under the Prin7r portfolio (a portfolio of operator-built micro-products). The catalog is curated by trade specialists, not by generalists. We're not raising a round; we're cash-flow first.
 
 ---
 

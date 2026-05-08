@@ -2,7 +2,7 @@
 
 ## Positioning (one sentence)
 
-**Toolshelf is a catalog of vertical-specific no-code tools — one tool per niche pain point, $39 a month, install Tuesday, cancel any time.**
+**TradeToolset is a catalog of vertical-specific no-code tools — one tool per niche pain point, $39 a month, install Tuesday, cancel any time.**
 
 The category is *catalog of micro-tools*. Not "no-code platform" (we're a layer on top of platforms). Not "no-code agency" (we're not selling labour). Not "vertical SaaS" (we're not selling a 30-feature suite).
 
@@ -19,8 +19,8 @@ The category is *catalog of micro-tools*. Not "no-code platform" (we're a layer 
 - **Sub**: a paragraph that explains every tool is a working no-code template, branded, wired to existing tools.
 
 ### Tool anatomy
-- **Lead-in**: `TOOL ANATOMY · TS-HVAC-002 · WORKED EXAMPLE`.
-- **Heading**: *What's actually inside a Toolshelf tool.*
+- **Lead-in**: `TOOL ANATOMY · TT-HVAC-002 · WORKED EXAMPLE`.
+- **Heading**: *What's actually inside a TradeToolset tool.*
 - **Sub**: a paragraph that says every tool has the same six pieces; only the names of the parts change.
 
 ### Pricing
@@ -29,7 +29,7 @@ The category is *catalog of micro-tools*. Not "no-code platform" (we're a layer 
 - **Sub**: a paragraph that explains the no-card-required-trial posture and the 30-day refund.
 
 ### Builder
-- **Lead-in**: `FOR BUILDERS · TS-PLAN-X · 70 / 30`.
+- **Lead-in**: `FOR BUILDERS · TT-PLAN-X · 70 / 30`.
 - **Heading**: *We pay 70% to vertical operators who publish.*
 
 ### FAQ
@@ -53,12 +53,12 @@ No marketing language. Treat it like a hardware-store window display.
 
 ### Pillar B — Vertical playbooks (1 / quarter)
 
-A free-to-download 40-60 page PDF for each vertical. Example: *The HVAC operator's playbook: 8 workflows that hurt and the order to fix them.* Sponsored by Toolshelf, distributed through:
+A free-to-download 40-60 page PDF for each vertical. Example: *The HVAC operator's playbook: 8 workflows that hurt and the order to fix them.* Sponsored by TradeToolset, distributed through:
 - Trade-association newsletters
 - The relevant FB groups (the moderator gets it before anyone else)
 - The catalog page itself (PDF download in exchange for an email)
 
-Each playbook ranks the workflows by ROI and slots in the relevant Toolshelf SKUs at the right rank — but the playbook is honest enough to say "for this workflow, hire a freelancer; for that one, our SKU fits."
+Each playbook ranks the workflows by ROI and slots in the relevant TradeToolset SKUs at the right rank — but the playbook is honest enough to say "for this workflow, hire a freelancer; for that one, our SKU fits."
 
 ### Pillar C — Builder spotlight (every other tool launch)
 
@@ -84,7 +84,7 @@ Detailed in `docs/09-go-to-market.md`. The 90-day sketch:
 - Use plain trade nouns, not euphemisms (`tonnage`, not "system size"; `n_seat`, not "guest capacity"; `no-show`, not "missed appointment").
 - Pricing is always visible. Calls are always optional, never required.
 - Refund policy is always one sentence away from the CTA.
-- We don't say "we're excited to announce." We say "TS-DENT-009 ships Friday."
+- We don't say "we're excited to announce." We say "TT-DENT-009 ships Friday."
 
 ## Anti-patterns to avoid
 

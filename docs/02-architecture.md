@@ -9,18 +9,18 @@ flowchart LR
         PHONE[Phone · receives PDF / SMS]
     end
 
-    subgraph TOOLSHELF["Toolshelf platform"]
+    subgraph TRADETOOLSET["TradeToolset platform"]
         LANDING["apps/landing<br/>Next.js 15 standalone<br/>Traefik @ no-code-vertical-tools.prin7r.com"]
         APP["apps/app<br/>Open-SaaS (stub for Wave 2,<br/>ships Wave 3)"]
         APIROUTES["/api/checkout/*<br/>/api/webhooks/*"]
     end
 
     subgraph TOOLS["Per-tool runtimes (no-code)"]
-        BUBBLE[Bubble · TS-HVAC-002, TS-DENT-004]
-        WEBFLOW[Webflow + Memberstack · TS-SALN-001]
-        AIRTABLE[Airtable + Softr · TS-AGEN-003, TS-SAOPS-005]
-        ZAPIER[Zapier flow · TS-ECOM-006, TS-REST-007]
-        HONO[Bun + Hono micro-svc · TS-ROOF-008]
+        BUBBLE[Bubble · TT-HVAC-002, TT-DENT-004]
+        WEBFLOW[Webflow + Memberstack · TT-SALN-001]
+        AIRTABLE[Airtable + Softr · TT-AGEN-003, TT-SAOPS-005]
+        ZAPIER[Zapier flow · TT-ECOM-006, TT-REST-007]
+        HONO[Bun + Hono micro-svc · TT-ROOF-008]
     end
 
     subgraph PAYMENT["NOWPayments rail"]
@@ -79,14 +79,14 @@ Each tool runs on the no-code platform that fits its workflow:
 
 | SKU | Stack | Why |
 |---|---|---|
-| TS-HVAC-002 (quote generator) | Bubble + PDF-rocket plugin | Form-heavy, branded PDF, Stripe link |
-| TS-DENT-004 (no-show predictor) | Bubble + Twilio | Risk model is a SQL view; SMS via Twilio |
-| TS-REST-007 (table-turn) | Airtable + Softr | POS CSV import; manager dashboard view |
-| TS-SALN-001 (rebook reminder) | Webflow + Memberstack + Twilio | Branded landing + 1-tap confirm flow |
-| TS-AGEN-003 (invoice chaser) | Airtable + Make.com | Xero/FreshBooks read; drafts to Gmail |
-| TS-SAOPS-005 (churn flag) | Airtable + Posthog API + Slack | Cross-source signal join |
-| TS-ECOM-006 (cart-to-WhatsApp) | Zapier + WhatsApp Business API | Shopify webhook → 9-min delay → WA |
-| TS-ROOF-008 (scope emailer) | Bun + Hono micro-svc | Photo upload + tagging needs a tiny custom svc |
+| TT-HVAC-002 (quote generator) | Bubble + PDF-rocket plugin | Form-heavy, branded PDF, Stripe link |
+| TT-DENT-004 (no-show predictor) | Bubble + Twilio | Risk model is a SQL view; SMS via Twilio |
+| TT-REST-007 (table-turn) | Airtable + Softr | POS CSV import; manager dashboard view |
+| TT-SALN-001 (rebook reminder) | Webflow + Memberstack + Twilio | Branded landing + 1-tap confirm flow |
+| TT-AGEN-003 (invoice chaser) | Airtable + Make.com | Xero/FreshBooks read; drafts to Gmail |
+| TT-SAOPS-005 (churn flag) | Airtable + Posthog API + Slack | Cross-source signal join |
+| TT-ECOM-006 (cart-to-WhatsApp) | Zapier + WhatsApp Business API | Shopify webhook → 9-min delay → WA |
+| TT-ROOF-008 (scope emailer) | Bun + Hono micro-svc | Photo upload + tagging needs a tiny custom svc |
 
 ### Payment rail — NOWPayments
 
@@ -103,7 +103,7 @@ visitor → landing → /api/checkout/nowpayments
   → NOWPayments hosted page (USDT / USDC / BTC / card on-ramp)
   → customer pays → NOWPayments POST /api/webhooks/nowpayments (HMAC-SHA512)
   → handler verifies, logs verified=true (Wave 2)
-  → orders@toolshelf.cash receives manual notification (Wave 2 fallback)
+  → orders@tradetoolset.com receives manual notification (Wave 2 fallback)
   → human installs the no-code template into the customer's account
   → customer receives install confirmation email + setup video link
 ```
@@ -113,7 +113,7 @@ In Wave 3, the human-install step is replaced by an in-app install wizard.
 ### 2. Builder publish
 
 ```
-builder → /api/builders/apply (Wave 3) — currently mailto:builders@toolshelf.cash
+builder → /api/builders/apply (Wave 3) — currently mailto:builders@tradetoolset.com
   → operator review (3 business days)
   → approved → builder ships Bubble/Webflow/Airtable template + asset bundle
   → operator publishes catalog row + sets price + assigns SKU

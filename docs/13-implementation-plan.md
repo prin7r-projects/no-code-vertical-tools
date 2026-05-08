@@ -109,7 +109,7 @@
 
 ## Phase 6 — API-break monitoring + deprecation flow
 
-- **Goal.** When a no-code platform breaks an API used by a Toolshelf tool, the system catches it
+- **Goal.** When a no-code platform breaks an API used by a TradeToolset tool, the system catches it
   fast and deprecates gracefully.
 - **Tasks.**
   1. `worker/deprecate` runs daily synthetic install for each `status=listed` tool — uses the
@@ -140,7 +140,7 @@
 | Builder submits a tool with hidden second job | Curator | 8-criterion checklist explicitly checks one_job_only. |
 | Quality drift after 50+ tools | Curator | Quarterly catalog audit; deprecate any tool with >20% refund rate. |
 | Bubble / Webflow API breaks at scale | Ops | API-break monitor (Phase 6) catches within 24h. |
-| Email deliverability | Ops | Postmark + custom domain (toolshelf.prin7r.com); SPF/DKIM/DMARC enforced. |
+| Email deliverability | Ops | Postmark + custom domain (tradetoolset.prin7r.com); SPF/DKIM/DMARC enforced. |
 
 ## Resume instructions
 

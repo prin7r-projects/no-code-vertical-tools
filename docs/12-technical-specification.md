@@ -1,6 +1,6 @@
 # 12 · Technical specification
 
-> Toolshelf = catalog of vertical no-code tools. Wave 2: landing + crypto checkout + builder submit
+> TradeToolset = catalog of vertical no-code tools. Wave 2: landing + crypto checkout + builder submit
 > form. Wave 3: subscription billing, install-link minting, curator queue, builder rev-share payouts.
 
 ## 1. Architecture overview
@@ -65,7 +65,7 @@ erDiagram
   SUBSCRIPTIONS ||--o{ ORDERS : billed_by
   TOOLS ||--o{ SUBMISSIONS : history
   TOOLS {
-    text sku PK "TS-HVAC-002"
+    text sku PK "TT-HVAC-002"
     text trade
     text one_job
     text install_link
@@ -152,7 +152,7 @@ Indexes: `tools.trade`, `subscriptions.status`, `(orders.invoice_id, orders.paym
 ## 5. Storage
 
 - Postgres 16 — single instance, 1GB MVP.
-- B2 — bucket `prin7r-toolshelf-screenshots`, 30-day lifecycle on rejected submissions.
+- B2 — bucket `prin7r-tradetoolset-screenshots`, 30-day lifecycle on rejected submissions.
 - No PII besides email; `buyers.email` UNIQUE; no last name, no payment card stored.
 - Retention: deactivated buyer rows kept 24mo for accounting, then anonymized.
 
@@ -175,7 +175,7 @@ Indexes: `tools.trade`, `subscriptions.status`, `(orders.invoice_id, orders.paym
 ## 8. Observability
 
 - Pino JSON logs; shipped to Loki on storage-contabo (Wave 3).
-- Metrics: `toolshelf.checkout.invoice_to_paid_ms`, `toolshelf.subscription.active`, `toolshelf.submission.queue_depth`.
+- Metrics: `tradetoolset.checkout.invoice_to_paid_ms`, `tradetoolset.subscription.active`, `tradetoolset.submission.queue_depth`.
 - Trace propagation: `traceparent` end-to-end.
 - Alerts: queue depth >5/3d, payout failure >0, NOW IPN 4xx >10/hr.
 

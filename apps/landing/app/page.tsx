@@ -1,7 +1,7 @@
 /**
- * [TOOLSHELF_LANDING] Wave 2 landing page.
+ * [TRADETOOLSET_LANDING] Wave 2 landing page.
  *
- * Brand: Toolshelf — a catalog of vertical-specific no-code tools.
+ * Brand: TradeToolset — a catalog of vertical-specific no-code tools.
  * Hero leads with the shelf (8 tool cards), not a slogan. Filter by vertical.
  * Tool anatomy section. Three pricing tiers with NOWPayments crypto CTAs.
  * Builder rev-share section. FAQ. Footer. All real copy, no lorem-ipsum.
@@ -37,7 +37,7 @@ type Tool = {
 
 const TOOLS: Tool[] = [
   {
-    sku: "TS-HVAC-002",
+    sku: "TT-HVAC-002",
     vertical: "hvac",
     verticalLabel: "HVAC",
     name: "Quote generator",
@@ -48,7 +48,7 @@ const TOOLS: Tool[] = [
     preview: PreviewQuote
   },
   {
-    sku: "TS-DENT-004",
+    sku: "TT-DENT-004",
     vertical: "dental",
     verticalLabel: "Dental",
     name: "No-show predictor",
@@ -59,7 +59,7 @@ const TOOLS: Tool[] = [
     preview: PreviewNoShow
   },
   {
-    sku: "TS-REST-007",
+    sku: "TT-REST-007",
     vertical: "restaurant",
     verticalLabel: "Restaurant",
     name: "Table-turn optimizer",
@@ -70,7 +70,7 @@ const TOOLS: Tool[] = [
     preview: PreviewTableTurn
   },
   {
-    sku: "TS-SALN-001",
+    sku: "TT-SALN-001",
     vertical: "ecommerce",
     verticalLabel: "Salon / spa",
     name: "Rebook reminder",
@@ -81,7 +81,7 @@ const TOOLS: Tool[] = [
     preview: PreviewRebook
   },
   {
-    sku: "TS-AGEN-003",
+    sku: "TT-AGEN-003",
     vertical: "agency-ops",
     verticalLabel: "Agency",
     name: "Invoice chaser",
@@ -92,7 +92,7 @@ const TOOLS: Tool[] = [
     preview: PreviewInvoice
   },
   {
-    sku: "TS-SAOPS-005",
+    sku: "TT-SAOPS-005",
     vertical: "saas-ops",
     verticalLabel: "SaaS-ops",
     name: "Churn flag",
@@ -103,7 +103,7 @@ const TOOLS: Tool[] = [
     preview: PreviewChurn
   },
   {
-    sku: "TS-ECOM-006",
+    sku: "TT-ECOM-006",
     vertical: "ecommerce",
     verticalLabel: "E-commerce",
     name: "Cart-to-WhatsApp",
@@ -114,7 +114,7 @@ const TOOLS: Tool[] = [
     preview: PreviewCart
   },
   {
-    sku: "TS-ROOF-008",
+    sku: "TT-ROOF-008",
     vertical: "hvac",
     verticalLabel: "Roofing",
     name: "Scope-of-work emailer",
@@ -335,7 +335,7 @@ function Header() {
         <a href="#hero" style={{ display: "flex", alignItems: "center", gap: 8 }}>
           <LogoMark />
           <span className="t-mono" style={{ color: "var(--fg)" }}>
-            TOOLSHELF
+            TRADETOOLSET
           </span>
         </a>
         <nav
@@ -375,7 +375,7 @@ function Header() {
 
 function LogoMark() {
   return (
-    <svg width="22" height="22" viewBox="0 0 32 32" aria-label="Toolshelf logo">
+    <svg width="22" height="22" viewBox="0 0 32 32" aria-label="TradeToolset logo">
       <rect width="32" height="32" rx="6" fill="#08090a" />
       <rect x="5" y="9" width="22" height="2" fill="#e4f222" />
       <rect x="5" y="20" width="22" height="2" fill="#e4f222" />
@@ -413,7 +413,7 @@ function Hero() {
               }}
             >
               <span className="dot" aria-hidden="true" />
-              <span>TOOLSHELF · 8 LIVE TOOLS · WAVE 2 · 2026.05.08</span>
+              <span>TRADETOOLSET · 8 LIVE TOOLS · WAVE 2 · 2026.05.08</span>
             </div>
             <h1 className="t-display" style={{ marginBottom: 20 }}>
               No-code, but only the tools{" "}
@@ -425,7 +425,7 @@ function Hero() {
             >
               The no-code rainbow says &quot;build anything.&quot; You&apos;re a roofer, a
               hygienist, a salon owner — you don&apos;t want anything, you want{" "}
-              <em>that one workflow</em> off your desk by Friday. Toolshelf is a catalog
+              <em>that one workflow</em> off your desk by Friday. TradeToolset is a catalog
               of vertical-specific micro-apps. Each tool does one job for one trade.
               Pick from the shelf, install in an afternoon, $39 a month, USDT/USDC pay,
               cancel any time.
@@ -451,13 +451,13 @@ function Hero() {
                 flexWrap: "wrap"
               }}
             >
-              <span>SKU TS-HVAC-002</span>
+              <span>SKU TT-HVAC-002</span>
               <span style={{ color: "var(--border)" }}>·</span>
-              <span>SKU TS-DENT-004</span>
+              <span>SKU TT-DENT-004</span>
               <span style={{ color: "var(--border)" }}>·</span>
-              <span>SKU TS-REST-007</span>
+              <span>SKU TT-REST-007</span>
               <span style={{ color: "var(--border)" }}>·</span>
-              <span>SKU TS-ECOM-006</span>
+              <span>SKU TT-ECOM-006</span>
             </div>
           </div>
           <div
@@ -616,7 +616,7 @@ function CatalogSection() {
             marginTop: 28
           }}
         >
-          # twelve more tools queued for q3 (TS-LAW-009 through TS-CLNC-020)
+          # twelve more tools queued for q3 (TT-LAW-009 through TT-CLNC-020)
         </p>
       </div>
     </section>
@@ -641,13 +641,13 @@ function ToolAnatomySection() {
       step: "03",
       name: "Branded PDF / SMS / email",
       detail:
-        "Logo, line items, terms, signature line. Sends through your domain, not Toolshelf's. The customer sees only your brand."
+        "Logo, line items, terms, signature line. Sends through your domain, not TradeToolset's. The customer sees only your brand."
     },
     {
       step: "04",
       name: "Pay link",
       detail:
-        "Stripe (existing account) or USDT/USDC via NOWPayments. Toolshelf doesn't take a cut on customer-side payments — that money goes straight to you."
+        "Stripe (existing account) or USDT/USDC via NOWPayments. TradeToolset doesn't take a cut on customer-side payments — that money goes straight to you."
     },
     {
       step: "05",
@@ -671,10 +671,10 @@ function ToolAnatomySection() {
           className="t-mono-sm"
           style={{ color: "var(--muted)", marginBottom: 8 }}
         >
-          TOOL ANATOMY · TS-HVAC-002 · WORKED EXAMPLE
+          TOOL ANATOMY · TT-HVAC-002 · WORKED EXAMPLE
         </div>
         <h2 className="t-heading-lg" style={{ marginBottom: 12 }}>
-          What&apos;s actually inside a Toolshelf tool.
+          What&apos;s actually inside a TradeToolset tool.
         </h2>
         <p
           className="t-body"
@@ -749,7 +749,7 @@ function ToolAnatomySection() {
           We don&apos;t hide the no-code stack. Most tools run on Bubble, Webflow,
           Airtable, and a small Zapier flow; the more specialised ones use a
           tiny Hono service hosted on our infra. You get the project files. If
-          you want to take it off Toolshelf and run it yourself, the source is
+          you want to take it off TradeToolset and run it yourself, the source is
           yours — keep it, fork it, give it to your nephew.
         </p>
       </div>
@@ -788,13 +788,13 @@ function PricingSection() {
           }}
         >
           <PriceCard
-            sku="TS-PLAN-S"
+            sku="TT-PLAN-S"
             tier="Single tool"
             price="$ 39"
             cadence="/ mo · per tool"
             blurb="Pick one tool from the shelf. Install kit, monthly tuning notes, support over email. Cancel any time."
             included={[
-              "1 Toolshelf tool of your choice",
+              "1 TradeToolset tool of your choice",
               "Branded delivery on your domain",
               "Email install support (24h, weekdays)",
               "Monthly one-page tuning note",
@@ -804,7 +804,7 @@ function PricingSection() {
             cta={<PricingCta plan="single" label="Pay $39 · install one tool" />}
           />
           <PriceCard
-            sku="TS-PLAN-B"
+            sku="TT-PLAN-B"
             tier="Vertical bundle"
             price="$ 129"
             cadence="/ mo · 5 tools, one vertical"
@@ -822,7 +822,7 @@ function PricingSection() {
             cta={<PricingCta plan="bundle" label="Pay $129 · install 5 tools" />}
           />
           <PriceCard
-            sku="TS-PLAN-X"
+            sku="TT-PLAN-X"
             tier="Builder · publish"
             price="$ 0"
             cadence="+ 30% rev-share"
@@ -833,7 +833,7 @@ function PricingSection() {
               "USDT payout to your wallet",
               "We handle the customer support escalation",
               "Marketing slot in our weekly digest",
-              "Apply via builders@toolshelf.cash",
+              "Apply via builders@tradetoolset.com",
               "We respond within 3 business days"
             ]}
             cta={<PricingCta plan="builder" label="Apply to publish a tool" />}
@@ -1032,7 +1032,7 @@ function BuilderSection() {
               className="t-mono-sm"
               style={{ color: "var(--accent)", marginBottom: 8 }}
             >
-              FOR BUILDERS · TS-PLAN-X · 70 / 30
+              FOR BUILDERS · TT-PLAN-X · 70 / 30
             </div>
             <h2 className="t-heading-lg" style={{ marginBottom: 12 }}>
               We pay 70% to vertical operators who publish.
@@ -1041,7 +1041,7 @@ function BuilderSection() {
               className="t-body"
               style={{ color: "var(--muted)", marginBottom: 16 }}
             >
-              Toolshelf doesn&apos;t want to be a 200-tool platform run by twelve
+              TradeToolset doesn&apos;t want to be a 200-tool platform run by twelve
               salaried generalists. The shelf is curated by the trades. If
               you&apos;re a no-code builder who knows one vertical cold —
               you ran the salon, you used to plumb, you do bookkeeping for ten
@@ -1058,7 +1058,7 @@ function BuilderSection() {
             </p>
             <a
               className="btn"
-              href="mailto:builders@toolshelf.cash?subject=I%20want%20to%20publish%20a%20TS-%20tool&body=Vertical%3A%20%0AWorkflow%20it%20replaces%3A%20%0AStack%20I%20can%20build%20it%20on%3A%20%28Bubble%2FWebflow%2FAirtable%2FZapier%2FOther%29%0AFair%20monthly%20price%3A%20%24"
+              href="mailto:builders@tradetoolset.com?subject=I%20want%20to%20publish%20a%20TT-%20tool&body=Vertical%3A%20%0AWorkflow%20it%20replaces%3A%20%0AStack%20I%20can%20build%20it%20on%3A%20%28Bubble%2FWebflow%2FAirtable%2FZapier%2FOther%29%0AFair%20monthly%20price%3A%20%24"
             >
               <span className="t-mono">apply &gt;</span>
               <span>Apply to publish</span>
@@ -1128,7 +1128,7 @@ function FaqSection() {
   const faqs: { q: string; a: string }[] = [
     {
       q: "What if my vertical isn&apos;t on the shelf yet?",
-      a: "Email founders@toolshelf.cash with the workflow and we&apos;ll tell you in 72 hours whether we can ship a tool for it in 6 weeks. We add about 4 new SKUs a quarter."
+      a: "Email founders@tradetoolset.com with the workflow and we&apos;ll tell you in 72 hours whether we can ship a tool for it in 6 weeks. We add about 4 new SKUs a quarter."
     },
     {
       q: "How fast is install?",
@@ -1152,10 +1152,10 @@ function FaqSection() {
     },
     {
       q: "Is this a no-code platform or a no-code agency?",
-      a: "Neither. It&apos;s a catalog. The platform is a thin shelf — billing, install, monthly tuning. The agencies built the templates. The trades buy them. Toolshelf is the shop in the middle."
+      a: "Neither. It&apos;s a catalog. The platform is a thin shelf — billing, install, monthly tuning. The agencies built the templates. The trades buy them. TradeToolset is the shop in the middle."
     },
     {
-      q: "What happens to my tool if Toolshelf disappears?",
+      q: "What happens to my tool if TradeToolset disappears?",
       a: "You still have the no-code project files (Bubble, Webflow, Airtable, Zapier). Your customer billing stops; you can move it to your own Stripe in a weekend. Your data is yours; we don&apos;t hold it hostage."
     }
   ];
@@ -1253,7 +1253,7 @@ function Footer() {
           >
             <LogoMark />
             <span className="t-mono" style={{ color: "var(--fg)" }}>
-              TOOLSHELF
+              TRADETOOLSET
             </span>
           </div>
           <p
@@ -1272,14 +1272,14 @@ function Footer() {
         <FooterCol
           head="CATALOG"
           links={[
-            ["TS-HVAC-002 · Quote generator", "#catalog"],
-            ["TS-DENT-004 · No-show predictor", "#catalog"],
-            ["TS-REST-007 · Table-turn", "#catalog"],
-            ["TS-SALN-001 · Rebook reminder", "#catalog"],
-            ["TS-AGEN-003 · Invoice chaser", "#catalog"],
-            ["TS-SAOPS-005 · Churn flag", "#catalog"],
-            ["TS-ECOM-006 · Cart-to-WhatsApp", "#catalog"],
-            ["TS-ROOF-008 · Scope emailer (q3)", "#catalog"]
+            ["TT-HVAC-002 · Quote generator", "#catalog"],
+            ["TT-DENT-004 · No-show predictor", "#catalog"],
+            ["TT-REST-007 · Table-turn", "#catalog"],
+            ["TT-SALN-001 · Rebook reminder", "#catalog"],
+            ["TT-AGEN-003 · Invoice chaser", "#catalog"],
+            ["TT-SAOPS-005 · Churn flag", "#catalog"],
+            ["TT-ECOM-006 · Cart-to-WhatsApp", "#catalog"],
+            ["TT-ROOF-008 · Scope emailer (q3)", "#catalog"]
           ]}
         />
         <FooterCol
@@ -1289,7 +1289,7 @@ function Footer() {
             ["Payouts in USDT", "#builders"],
             ["IPN webhook spec", "/api/webhooks/nowpayments"],
             ["KYC handled by NOWPayments", "#faq"],
-            ["builders@toolshelf.cash", "mailto:builders@toolshelf.cash"]
+            ["builders@tradetoolset.com", "mailto:builders@tradetoolset.com"]
           ]}
         />
         <FooterCol
@@ -1297,8 +1297,8 @@ function Footer() {
           links={[
             ["Refund policy · 30 days", "#faq"],
             ["Source-code ownership", "#faq"],
-            ["orders@toolshelf.cash", "mailto:orders@toolshelf.cash"],
-            ["founders@toolshelf.cash", "mailto:founders@toolshelf.cash"],
+            ["orders@tradetoolset.com", "mailto:orders@tradetoolset.com"],
+            ["founders@tradetoolset.com", "mailto:founders@tradetoolset.com"],
             ["Status · all systems live", "#hero"]
           ]}
         />
@@ -1322,7 +1322,7 @@ function Footer() {
             letterSpacing: "0.06em"
           }}
         >
-          TOOLSHELF · A CATALOG OF SHARP TOOLS · MMXXVI
+          TRADETOOLSET · A CATALOG OF SHARP TOOLS · MMXXVI
         </span>
         <span
           className="t-mono-sm"
