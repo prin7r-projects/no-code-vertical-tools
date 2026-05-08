@@ -99,6 +99,11 @@ page DashboardPage {
   component: import { DashboardPage } from "@src/dashboard/DashboardPage"
 }
 
+query getUser {
+  fn: import { getUser } from "@src/user/operations",
+  entities: [User]
+}
+
 // Operator Routes
 route OperatorQueueRoute { path: "/operator/queue", to: OperatorQueuePage }
 page OperatorQueuePage {
