@@ -47,27 +47,32 @@ For solo operators and small-business owners in the trades (HVAC, dental, restau
 
 ## Visual system
 
-- **Palette** (5 + 2 semantic, all hex): see `DESIGN.md §4`.
-  - `--bg #0c0d0e` workshop black (page canvas)
-  - `--surface #16181b` gunmetal (card surface)
-  - `--accent #f76d3c` persimmon (CTAs, focus, live dot accent)
-  - `--fg #f3efe7` lab coat (text)
-  - `--muted #9aa0a8` solder (secondary text)
-  - `--ok #7be0a6` mint (status: live)
+- **Palette** (5 + 2 semantic, all hex): see `DESIGN.md §4`. Wave 2 design refresh
+  (2026-05-08) re-aligned the palette to Linear's reference tokens 1:1 (the
+  Toolshelf metaphor names are kept; the hex values now match Linear). See
+  `DESIGN.md §15` for the full pivot record.
+  - `--bg #08090a` pitch-black (page canvas, Linear's pitch-black)
+  - `--surface #0f1011` graphite (card surface)
+  - `--surface-2 #161718` deep-slate (elevated surface)
+  - `--border #23252a` charcoal-grey (hairlines)
+  - `--accent #e4f222` neon-lime (CTAs, focus, live dot accent — Linear's signature)
+  - `--fg #f7f8f8` porcelain (text)
+  - `--muted #8a8f98` storm-cloud (secondary text)
+  - `--ok #27a644` emerald (status: live)
   - `--warn #f5d96a` sodium (status: draft)
 - **Typography**:
   - Display + body — Inter Variable (Google Fonts), weights 400/510/590/680.
   - Mono — JetBrains Mono (Google Fonts), weights 400/500. Used for SKUs, prices, filter labels.
-- **Logo concept** (verbal + SVG): a shelf with three tools mounted on it. Two horizontal persimmon rails (the shelf rails); three vertical lab-coat rectangles (the tools). Square 32×32. The shelf is wider than the tools so the rails extend past them. Inline SVG (no external asset):
+- **Logo concept** (verbal + SVG): a shelf with three tools mounted on it. Two horizontal neon-lime rails (the shelf rails); three vertical porcelain rectangles (the tools). Square 32×32. The shelf is wider than the tools so the rails extend past them. Inline SVG (no external asset):
 
   ```svg
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-    <rect width="32" height="32" rx="6" fill="#0c0d0e"/>
-    <rect x="5" y="9" width="22" height="2" fill="#f76d3c"/>
-    <rect x="5" y="20" width="22" height="2" fill="#f76d3c"/>
-    <rect x="9" y="11" width="3" height="9" fill="#f3efe7"/>
-    <rect x="15" y="11" width="3" height="9" fill="#f3efe7"/>
-    <rect x="21" y="11" width="3" height="9" fill="#f3efe7"/>
+    <rect width="32" height="32" rx="6" fill="#08090a"/>
+    <rect x="5" y="9" width="22" height="2" fill="#e4f222"/>
+    <rect x="5" y="20" width="22" height="2" fill="#e4f222"/>
+    <rect x="9" y="11" width="3" height="9" fill="#f7f8f8"/>
+    <rect x="15" y="11" width="3" height="9" fill="#f7f8f8"/>
+    <rect x="21" y="11" width="3" height="9" fill="#f7f8f8"/>
   </svg>
   ```
 - **Spacing** — 4px base, scale `4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 / 48 / 64 / 96 / 128`.
@@ -76,7 +81,7 @@ For solo operators and small-business owners in the trades (HVAC, dental, restau
 
 ## Forbidden moves
 
-- Cloning Linear: same dark canvas, *but* different accent (Persimmon, not Neon Lime), different hero (catalog-first, not slogan-first), different mono (JetBrains, not Berkeley).
+- Cloning Linear wholesale: same dark canvas + neon-lime accent (per Wave 2 Linear-aligned refresh), but different hero (catalog-first, not slogan-first), different mono (JetBrains, not Berkeley), different IA (tool-catalog, not issue-tracker).
 - "No-code rainbow": no purple-pink gradients, no glassmorphism, no 3D isometric cube illustrations.
 - Generic SaaS sky-blue.
 - The Stripe sky-blue gradient.

@@ -8,7 +8,7 @@
 > **Deploy:** storage-contabo `/opt/prin7r-deploys/no-code-vertical-tools`
 > **Secrets:** NOWPAYMENTS_API_KEY, NOWPAYMENTS_IPN_SECRET, POSTMARK_SERVER_TOKEN, TURNSTILE_SECRET,
 > SLACK_WEBHOOK_URL, DATABASE_URL, B2_KEY_ID, B2_APP_KEY.
-> **Tone constraint:** lowercase, blue-collar, dark canvas (#0C0D0E linear-ref), no decorative
+> **Tone constraint:** lowercase, blue-collar, dark canvas (#08090a linear-ref), no decorative
 > motion. See `01-brand-identity.md` §Visual.
 
 ## Phase 0 — Wave 2 catalog + checkout + submit (DONE)

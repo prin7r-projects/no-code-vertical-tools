@@ -39,7 +39,7 @@ Don'ts:
 
 Do's:
 - Catalog over hero — the *shelf of 8 tools* leads, not a tagline
-- Tool cards as the dominant visual element, all 6px radius, all Persimmon-CTA
+- Tool cards as the dominant visual element, all 6px radius, all neon-lime-CTA
 - SKU monotype labels everywhere
 - Filter chips that feel like the side panel of a precision instrument
 
@@ -130,15 +130,15 @@ No glow, no blur, no offset shadow > 8px y-axis.
 
 Hand-rolled, ShadCN-token-compatible:
 
-- **Button.primary** — Persimmon fill, Workshop Black text, 590 weight, 14px, 6px radius, 11px y / 16px x padding. Hover: Persimmon Deep + 1px lift via `transform: translateY(-1px)`.
-- **Button.ghost** — transparent bg, Lab Coat text, 1px border, 6px radius. Hover: bg `--surface-2`.
+- **Button.primary** — Neon-lime fill, Pitch-black text, 590 weight, 14px, 6px radius, 11px y / 16px x padding. Hover: Neon-lime Deep + 1px lift via `transform: translateY(-1px)`.
+- **Button.ghost** — transparent bg, Porcelain text, 1px border, 6px radius. Hover: bg `--surface-2`.
 - **ToolCard** — surface bg, 1px border, 6px radius, 16px padding, 12px gap. Header row: SKU mono-sm + price mono on right. Body: tool name (heading), one-line vertical promise (body), tiny screenshot (12:5 aspect), `Install` button (block, primary).
-- **ShelfFilter** — chip group, `category: ops`, `vertical: hvac`, etc. Default: `--surface` bg, 1px border. Active: Persimmon outline + Persimmon text, no fill.
+- **ShelfFilter** — chip group, `category: ops`, `vertical: hvac`, etc. Default: `--surface` bg, 1px border. Active: Neon-lime outline + Neon-lime text, no fill.
 - **SkuTag** — JetBrains Mono 11px, uppercase, 4px x / 2px y padding, 4px radius, `--surface-2` bg, `--muted` text. Always paired with the tool name.
-- **PriceCell** — JetBrains Mono 15px, Lab Coat, with `/ mo` in mono-sm Solder.
+- **PriceCell** — JetBrains Mono 15px, Porcelain, with `/ mo` in mono-sm Storm-cloud.
 - **ToolAnatomy** — labelled diagram component (one tool unfolded into its parts).
 - **Pricing card** — three tiers: `Single tool`, `Bundle`, `Builder`. Each is a vertical card with header SKU, price, included list (12 items max), `Install` CTA.
-- **CryptoCheckoutButton** — Persimmon button, mono prefix `pay >`, hits `/api/checkout/nowpayments`, redirects to NOWPayments-hosted invoice.
+- **CryptoCheckoutButton** — Neon-lime button, mono prefix `pay >`, hits `/api/checkout/nowpayments`, redirects to NOWPayments-hosted invoice.
 - **FAQ accordion** — chevron mono, divider hairlines, 8 questions max.
 
 ## 9. Landing page structure
@@ -147,14 +147,14 @@ The landing is intentionally one long page. The shelf and the tools must appear 
 
 1. **Header** (sticky, 56px). Logo · `Catalog · Verticals · Build · Pricing` · CTA `Open the shelf`.
 2. **Hero — the shelf-first hero.** Display title (max two lines): *No-code, but only the tools that work for one trade.* Sub-line (body-lg, Solder): one paragraph explaining catalog-not-platform. Mono caption with three tool SKUs scrolling in: `TS-HVAC-002 · TS-DENT-004 · TS-REST-007`. Right side: a 4-up tool card preview (HVAC quote generator, dental no-show predictor, restaurant table-turn, salon rebook reminder).
-3. **Catalog peek** — the *6+ tool catalog* in a 3-or-4-col grid. Real names, real SKUs, real promises, real prices. This is the headline section. Each card has the `Install` Persimmon CTA.
+3. **Catalog peek** — the *6+ tool catalog* in a 3-or-4-col grid. Real names, real SKUs, real promises, real prices. This is the headline section. Each card has the `Install` neon-lime CTA.
 4. **By vertical filter** — chip rail: `HVAC · Dental · Restaurant · SaaS-ops · Agency-ops · E-commerce`. Selecting one filters the catalog above. Implementation: pure CSS class toggle, no SPA. Default state: all filters active.
 5. **Tool anatomy** — *what's inside one tool* (worked example: HVAC quote generator). Diagram (mermaid-style, hand-drawn) showing the 6 pieces: input form / pricing rules / branded PDF / Stripe-or-crypto pay link / SMS notifier / dashboard. Each piece labelled with mono. Below: "this is the same anatomy for every tool on the shelf — only the names of the parts change."
 6. **Pricing — three tiers with crypto CTA.**
    - **Single tool** — $39 / mo per tool installed. NOWPayments crypto CTA (USDT/USDC/BTC). Cancel any time.
    - **Bundle** — $129 / mo for any 5 tools from one vertical. Recommended.
    - **Builder** — $0 + 30% rev-share. Publish your own tool to the shelf. Payout in USDT to your wallet. KYC handled by NOWPayments.
-   Each card has its own `pay >` Persimmon CTA. The Single and Bundle CTAs invoke the NOWPayments hosted invoice flow.
+   Each card has its own `pay >` neon-lime CTA. The Single and Bundle CTAs invoke the NOWPayments hosted invoice flow.
 7. **Builder section — submit a tool.** Heading: *We pay 70% to vertical operators who publish.* Body: three steps (1) describe the workflow (2) we ship the no-code template (3) you keep 70% on every install. CTA: `pay >` (or `apply >`) — opens an email with a pre-fill: `subject: I want to publish a TS-XXXX tool`.
 8. **FAQ** — 8 questions covering: refund policy, install delay, vertical fit, custom tools, payouts, KYC, source-code ownership, churn.
 9. **Footer** — 4-col grid as in §7.
@@ -164,9 +164,9 @@ The landing is intentionally one long page. The shelf and the tools must appear 
 Toolshelf is intentionally low-imagery. The art is the catalog itself. Allowed asset types:
 - Tiny screenshots inside ToolCards — these can be SVG mockups (no external assets required).
 - Tool anatomy diagram — inline SVG, hand-drawn-feel paths, no PNG.
-- A small workshop-wall divider SVG between sections (1px hairline with a 6px persimmon dot every 32px).
+- A small workshop-wall divider SVG between sections (1px hairline with a 6px neon-lime dot every 32px).
 
-Generated imagery (GPT Image 2 / `prin7r-generate-image`) — **deferred for Wave 2 build**. If we later use it, prompt template: `"a precise tool catalog page at a workshop, dark gunmetal table, persimmon labels, tools shot from above, label tag with SKU TS-XXXX, hyperreal photography, no background blur, no people"`. Aspect 12:5, hero use only. **As of this build:** no generated assets are shipped — we use SVG only — and `apps/landing/public/generated/` is intentionally empty.
+Generated imagery (GPT Image 2 / `prin7r-generate-image`) — **deferred for Wave 2 build**. If we later use it, prompt template: `"a precise tool catalog page at a workshop, dark gunmetal table, neon-lime labels, tools shot from above, label tag with SKU TS-XXXX, hyperreal photography, no background blur, no people"`. Aspect 12:5, hero use only. **As of this build:** no generated assets are shipped — we use SVG only — and `apps/landing/public/generated/` is intentionally empty.
 
 ## 11. Motion and interaction rules
 
@@ -178,9 +178,9 @@ Generated imagery (GPT Image 2 / `prin7r-generate-image`) — **deferred for Wav
 
 ## 12. Accessibility and quality gates
 
-- Contrast: Lab Coat on Workshop Black = 16:1 (AAA). Solder on Workshop Black = 7.4:1 (AAA body / AA fine print). Persimmon on Workshop Black = 5.4:1 (AA large text — used for >= 14px buttons only). Persimmon on Lab Coat (when used as inverse): 4.6:1 (AA, never shipped at <14px).
+- Contrast: Porcelain on Pitch-black = 17.6:1 (AAA). Storm-cloud on Pitch-black = 7.0:1 (AAA body / AA fine print). Neon-lime on Pitch-black = 14.8:1 (AAA — Linear's signature high-contrast accent). Neon-lime is dark-text inverse only on its own fill (Pitch-black on Neon-lime = 14.8:1, AAA).
 - Tab order: header → hero CTA → catalog cards (left-to-right, top-to-bottom install buttons) → vertical filter chips → pricing CTAs → builder CTA → FAQ chevrons → footer.
-- Focus ring: 2px solid Persimmon, offset 2px, on `:focus-visible` only. Never on `:hover`.
+- Focus ring: 2px solid Neon-lime, offset 2px, on `:focus-visible` only. Never on `:hover`.
 - All images have meaningful `alt` (or empty alt for purely decorative SVG dividers).
 - All CTAs are real `<button>` or `<a>`. No clickable `<div>`.
 - Reduced motion respected (see §11).
